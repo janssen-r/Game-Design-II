@@ -1,6 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://diinejjdxr6s4"]
+[gd_scene load_steps=9 format=3 uid="uid://diinejjdxr6s4"]
 
-[ext_resource type="Script" path="res://player_3d.gd" id="1_q57r5"]
+[ext_resource type="PackedScene" uid="uid://1643kmvtvyxa" path="res://player_3d.tscn" id="1_3h8s0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hg6b4"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -13,10 +13,6 @@ sky_material = SubResource("ProceduralSkyMaterial_hg6b4")
 background_mode = 2
 sky = SubResource("Sky_d0ugi")
 tonemap_mode = 2
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_g8vrx"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1qi38"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_f6ahp"]
 size = Vector2(500, 500)
@@ -39,24 +35,8 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_j062c")
 
-[node name="player3d" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18.4624, 0)
-script = ExtResource("1_q57r5")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="player3d"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.63527, 0)
-mesh = SubResource("CapsuleMesh_g8vrx")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="player3d"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.61438, 0)
-shape = SubResource("CapsuleShape3D_1qi38")
-
-[node name="Head" type="Node3D" parent="player3d"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.13156, 0)
-
-[node name="Camera3D" type="Camera3D" parent="player3d/Head"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0350065, 0.151983, -0.0853925)
-fov = 90.0
+[node name="player3d" parent="." instance=ExtResource("1_3h8s0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.9758, 0)
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
 use_collision = true
