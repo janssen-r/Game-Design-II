@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 const WALK_SPEED = 5.0
-const SPRINT_SPEED = 8.5
+const SPRINT_SPEED = 1000.0
 const CAM_SENSITIVITY = 0.03
 var SPEED = WALK_SPEED
 
@@ -45,39 +45,39 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("change_camera"): # V
 		toggle_camera_parent()
 
-		if Input.is_action_just_pressed("sprint"):
-			SPEED = SPRINT_SPEED
-			FOV_CHANGE = 2.0
-		else:
-			SPEED = WALK_SPEED
-			FOV_CHANGE = 1.0
+	if Input.is_action_pressed("sprint"):
+		SPEED = SPRINT_SPEED
+		FOV_CHANGE = 2.0
+	else:
+		SPEED = WALK_SPEED
+		FOV_CHANGE = 1.0
 
-	# Add the gravity.
-		if not is_on_floor():
-			velocity += get_gravity() * delta
-	# Handle jump.
-		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-			velocity.y = JUMP_VELOCITY 
+# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+# Handle jump.
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		velocity.y = JUMP_VELOCITY 
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-		var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-		if direction:
-			velocity.x = direction.x * SPEED
-			velocity.z = direction.z * SPEED
-		else:
-			velocity.x = move_toward(velocity.x, 0, SPEED)
-			velocity.z = move_toward(velocity.z, 0, SPEED)
+# Get the input direction and handle the movement/deceleration.
+# As good practice, you should replace UI actions with custom gameplay actions.
+	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	if direction:
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.z = move_toward(velocity.z, 0, SPEED)
 
-		var velocity_clamped = clamp(velocity.length(), 0.5, SPEED * 2)
-		var target_fov = BASE_FOV + FOV_CHANGE * velocity_clamped
-		camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
+	var velocity_clamped = clamp(velocity.length(), 0.5, SPEED * 2)
+	var target_fov = BASE_FOV + FOV_CHANGE * velocity_clamped
+	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
 
-		t_bob += delta * velocity.length() * float(is_on_floor())
-		camera.transform.origin = headbob(t_bob)
+	t_bob += delta * velocity.length() * float(is_on_floor())
+	camera.transform.origin = headbob(t_bob)
 
-		move_and_slide()
+	move_and_slide()
 
 func toggle_camera_parent():
 	var parent = "Head"

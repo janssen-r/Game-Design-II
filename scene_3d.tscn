@@ -1,18 +1,29 @@
-[gd_scene load_steps=9 format=3 uid="uid://diinejjdxr6s4"]
+[gd_scene load_steps=21 format=3 uid="uid://diinejjdxr6s4"]
 
 [ext_resource type="PackedScene" uid="uid://1643kmvtvyxa" path="res://player_3d.tscn" id="1_3h8s0"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="2_b7oyl"]
+[ext_resource type="Resource" path="res://assets/Terrains/scene_3d/data.hterrain" id="3_5r6m8"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="4_1r4tq"]
+[ext_resource type="Texture2D" uid="uid://dfuwxw4attrw7" path="res://assets/Textures/Grass004_2K-PNG/Grass004_2K-PNG_Color.png" id="5_50o5b"]
+[ext_resource type="Texture2D" uid="uid://cm46pv0y0ccm1" path="res://assets/Textures/Metal048B_2K-PNG/Metal048B_2K-PNG_Color.png" id="6_jkb8g"]
+[ext_resource type="Texture2D" uid="uid://btcjxibh4cqdl" path="res://assets/Textures/Rock057_1K-JPG/Rock057_1K-JPG_Color.jpg" id="7_60q2j"]
+[ext_resource type="Texture2D" uid="uid://djoewn7ae8s4o" path="res://assets/Textures/PavingStones138_2K-PNG/PavingStones138_2K-PNG_Color.png" id="8_ke35b"]
+[ext_resource type="Texture2D" uid="uid://cltav85ndd7nm" path="res://assets/Textures/Grass004_2K-PNG/Grass004_2K-PNG_NormalGL.png" id="9_d45k1"]
+[ext_resource type="Texture2D" uid="uid://owk5f7hjet3q" path="res://assets/Textures/Metal048B_2K-PNG/Metal048B_2K-PNG_NormalGL.png" id="10_ie4cr"]
+[ext_resource type="Texture2D" uid="uid://dlcfrax7m2klu" path="res://assets/Textures/Rock057_1K-JPG/Rock057_1K-JPG_NormalGL.jpg" id="11_533qx"]
+[ext_resource type="Texture2D" uid="uid://btmnp8wvrs284" path="res://assets/Textures/PavingStones138_2K-PNG/PavingStones138_2K-PNG_NormalGL.png" id="12_ldrld"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hg6b4"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_a2vex"]
 
 [sub_resource type="Sky" id="Sky_d0ugi"]
-sky_material = SubResource("ProceduralSkyMaterial_hg6b4")
+sky_material = SubResource("PanoramaSkyMaterial_a2vex")
 
 [sub_resource type="Environment" id="Environment_j062c"]
 background_mode = 2
 sky = SubResource("Sky_d0ugi")
 tonemap_mode = 2
+volumetric_fog_enabled = true
+volumetric_fog_density = 2.4785
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_f6ahp"]
 size = Vector2(500, 500)
@@ -25,20 +36,25 @@ albedo_color = Color(0.337255, 1, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_js4oj"]
 
+[sub_resource type="Resource" id="Resource_jkmxr"]
+script = ExtResource("4_1r4tq")
+mode = 0
+textures = [[ExtResource("5_50o5b"), ExtResource("6_jkb8g"), ExtResource("7_60q2j"), ExtResource("8_ke35b")], [ExtResource("9_d45k1"), ExtResource("10_ie4cr"), ExtResource("11_533qx"), ExtResource("12_ldrld")]]
+
 [node name="scene_3d" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
-light_energy = 6.5
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_j062c")
 
 [node name="player3d" parent="." instance=ExtResource("1_3h8s0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.9758, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 51.7303, 0)
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+visible = false
 use_collision = true
 mesh = SubResource("PlaneMesh_f6ahp")
 material = SubResource("StandardMaterial3D_taawh")
@@ -65,3 +81,22 @@ use_collision = true
 radius = 16.2053
 height = 4.52611
 material = SubResource("StandardMaterial3D_js4oj")
+
+[node name="HTerrain" type="Node3D" parent="."]
+script = ExtResource("2_b7oyl")
+centered = true
+_terrain_data = ExtResource("3_5r6m8")
+chunk_size = 32
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+shader_type = "Classic4Lite"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource("Resource_jkmxr")
+render_layers = 1
+cast_shadow = 1
+shader_params/u_ground_uv_scale = 20
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = null
+shader_params/u_tile_reduction = null
