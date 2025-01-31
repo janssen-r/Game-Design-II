@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 const WALK_SPEED = 5.0
-const SPRINT_SPEED = 1000.0
+const SPRINT_SPEED = 10.0
 const CAM_SENSITIVITY = 0.03
 var SPEED = WALK_SPEED
 
@@ -11,6 +11,7 @@ const JUMP_VELOCITY = 7.5
 @onready var camera_pos = camera.position
 
 @onready var BASE_FOV = camera.fov
+@onready var can_grapple = true
 var FOV_CHANGE = 1.0
 
 var first_person = true
@@ -52,6 +53,15 @@ func _physics_process(delta: float) -> void:
 		SPEED = WALK_SPEED
 		FOV_CHANGE = 1.0
 
+	if is_on_floor():
+		can_grapple = true
+
+	if Input.is_action_pressed("Grapple") and can_grapple == true:
+		can_grapple = false
+		var grapple_point = $Head/RayCast3D.get_collision_point()
+		(position - grapple_point).normalized 
+# https://forum.godotengine.org/t/how-exactly-do-you-make-an-enemy-move-towards-the-player-in-3d/1477
+
 # Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -92,7 +102,7 @@ func toggle_camera_parent():
 		camera.position = camera_pos
 		# TODO: model invisible
 	first_person = not first_person # false -> true or true -> false
-
+	 
 func headbob(time):
 	var pos = Vector3.ZERO
 	pos.x = cos(time*BOB_FREQ / 2) * BOB_AMP
