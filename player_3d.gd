@@ -4,6 +4,8 @@ const WALK_SPEED = 5.0
 const SPRINT_SPEED = 10.0
 const CAM_SENSITIVITY = 0.03
 var SPEED = WALK_SPEED
+var grapple_speed = 1.0
+var grapple_dir = Vector3(0, 0, 0)
 
 const JUMP_VELOCITY = 7.5
 @onready var camera = $Head/Camera3D
@@ -59,7 +61,10 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("Grapple") and can_grapple == true:
 		can_grapple = false
 		var grapple_point = $Head/RayCast3D.get_collision_point()
-		(position - grapple_point).normalized 
+		while Input.is_action_pressed("Grapple"):
+			grapple_speed = clamp(grapple_speed * pow(1.05, 2.0), 0.0, 100)
+			grapple_dir = ((self.global_transform.origin - grapple_point).normalized)
+			self.global_transform.origin += grapple_dir * grapple_speed
 # https://forum.godotengine.org/t/how-exactly-do-you-make-an-enemy-move-towards-the-player-in-3d/1477
 
 # Add the gravity.
