@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://diinejjdxr6s4"]
+[gd_scene load_steps=23 format=3 uid="uid://diinejjdxr6s4"]
 
 [ext_resource type="PackedScene" uid="uid://1643kmvtvyxa" path="res://player_3d.tscn" id="1_3h8s0"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="2_b7oyl"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://owk5f7hjet3q" path="res://assets/Textures/Metal048B_2K-PNG/Metal048B_2K-PNG_NormalGL.png" id="10_ie4cr"]
 [ext_resource type="Texture2D" uid="uid://dlcfrax7m2klu" path="res://assets/Textures/Rock057_1K-JPG/Rock057_1K-JPG_NormalGL.jpg" id="11_533qx"]
 [ext_resource type="Texture2D" uid="uid://btmnp8wvrs284" path="res://assets/Textures/PavingStones138_2K-PNG/PavingStones138_2K-PNG_NormalGL.png" id="12_ldrld"]
+[ext_resource type="PackedScene" uid="uid://dmbrnwu4bkk8h" path="res://enemy_3d.tscn" id="13_42sp1"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_a2vex"]
 
@@ -40,6 +41,8 @@ albedo_color = Color(0.337255, 1, 1, 1)
 script = ExtResource("4_1r4tq")
 mode = 0
 textures = [[ExtResource("5_50o5b"), ExtResource("6_jkb8g"), ExtResource("7_60q2j"), ExtResource("8_ke35b")], [ExtResource("9_d45k1"), ExtResource("10_ie4cr"), ExtResource("11_533qx"), ExtResource("12_ldrld")]]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ohpwm"]
 
 [node name="scene_3d" type="Node3D"]
 
@@ -103,3 +106,21 @@ shader_params/u_ground_uv_scale = 20
 shader_params/u_depth_blending = true
 shader_params/u_triplanar = null
 shader_params/u_tile_reduction = null
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_ohpwm")
+
+[node name="enemy3d" parent="." instance=ExtResource("13_42sp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.357, 5.441, 69.157)
+
+[node name="enemy3d2" parent="." instance=ExtResource("13_42sp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.2863, 5.441, -28.3319)
+
+[node name="enemy3d3" parent="." instance=ExtResource("13_42sp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.11147, 5.441, -128.656)
+
+[node name="enemy3d4" parent="." instance=ExtResource("13_42sp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 153.955, 5.441, 2.54034)
+
+[node name="enemy3d5" parent="." instance=ExtResource("13_42sp1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.9634, 5.441, 84.4771)
