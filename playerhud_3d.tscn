@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyhhi5oaopvdf"]
+
+[ext_resource type="Script" path="res://playerhud_3d.gd" id="1_ac5wb"]
+
+[node name="playerhud_3d" type="Control" groups=["HUD"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_ac5wb")
+
+[node name="overlay" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="healthbar" type="ProgressBar" parent="."]
+modulate = Color(0, 0.655101, 0.111882, 1)
+layout_mode = 0
+offset_left = 9.0
+offset_top = 10.0
+offset_right = 397.0
+offset_bottom = 67.0
+show_percentage = false

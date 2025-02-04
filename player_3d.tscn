@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://1643kmvtvyxa"]
+[gd_scene load_steps=5 format=3 uid="uid://1643kmvtvyxa"]
 
 [ext_resource type="Script" path="res://player_3d.gd" id="1_lkljd"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_g8vrx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1qi38"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1gsml"]
+height = 0.551627
+radius = 0.553288
 
 [node name="player3d" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_lkljd")
@@ -29,3 +33,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0350065, 0.151983, -0.08539
 fov = 90.0
 
 [node name="RayCast3D" type="RayCast3D" parent="Head"]
+
+[node name="Feet" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Feet"]
+transform = Transform3D(1.055, 0, 0, 0, 1.055, 0, 0, 0, 1.055, 0, -0.845563, 0)
+shape = SubResource("CylinderShape3D_1gsml")
