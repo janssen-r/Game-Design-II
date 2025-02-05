@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cqjg62h43ae5"]
+
+[ext_resource type="Shader" path="res://addons/zylann.hterrain/shaders/take_damage.gdshader" id="1_my1x6"]
+
+[resource]
+shader = ExtResource("1_my1x6")
