@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://diinejjdxr6s4"]
+[gd_scene load_steps=25 format=3 uid="uid://diinejjdxr6s4"]
 
 [ext_resource type="PackedScene" uid="uid://1643kmvtvyxa" path="res://player_3d.tscn" id="1_3h8s0"]
 [ext_resource type="PackedScene" uid="uid://cyhhi5oaopvdf" path="res://playerhud_3d.tscn" id="1_iuopn"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dlcfrax7m2klu" path="res://assets/Textures/Rock057_1K-JPG/Rock057_1K-JPG_NormalGL.jpg" id="11_533qx"]
 [ext_resource type="Texture2D" uid="uid://btmnp8wvrs284" path="res://assets/Textures/PavingStones138_2K-PNG/PavingStones138_2K-PNG_NormalGL.png" id="12_ldrld"]
 [ext_resource type="PackedScene" uid="uid://dmbrnwu4bkk8h" path="res://enemy_3d.tscn" id="13_42sp1"]
+[ext_resource type="PackedScene" uid="uid://cqq0tc6tsk6ky" path="res://addons/zylann.hterrain/shaders/goal.tscn" id="15_yopjv"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_a2vex"]
 
@@ -127,3 +128,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 153.955, 5.441, 2.54034)
 
 [node name="enemy3d5" parent="." instance=ExtResource("13_42sp1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.9634, 5.441, 84.4771)
+
+[node name="Goal" parent="." instance=ExtResource("15_yopjv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.6682, 0.863194, 32.7011)

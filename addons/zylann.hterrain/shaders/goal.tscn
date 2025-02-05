@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqq0tc6tsk6ky"]
+
+[ext_resource type="Script" path="res://addons/zylann.hterrain/shaders/goal.gd" id="1_l1bts"]
+[ext_resource type="Texture2D" uid="uid://8au4gmkvix4n" path="res://assets/Textures/Metal048B_2K-PNG/Metal048B.png" id="1_lnems"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_nclq3"]
+top_radius = 4.0
+bottom_radius = 4.0
+height = 10.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7pjt1"]
+albedo_color = Color(0.894118, 0.552941, 0, 1)
+metallic = 0.6
+metallic_specular = 0.65
+metallic_texture = ExtResource("1_lnems")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tivpo"]
+height = 10.0
+radius = 4.00797
+
+[node name="Goal" type="Area3D"]
+script = ExtResource("1_l1bts")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_nclq3")
+surface_material_override/0 = SubResource("StandardMaterial3D_7pjt1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_tivpo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
