@@ -26,4 +26,6 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
+	nav_agent.target_position = global_position
+	
 	move_and_slide()

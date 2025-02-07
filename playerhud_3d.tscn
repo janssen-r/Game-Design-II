@@ -15,7 +15,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_ac5wb")
 
-[node name="overlay" type="ColorRect" parent="."]
+[node name="overlay" type="ColorRect" parent="." groups=["HUD"]]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,7 +25,7 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
-[node name="healthbar" type="ProgressBar" parent="."]
+[node name="healthbar" type="ProgressBar" parent="." groups=["HUD"]]
 modulate = Color(0, 0.655101, 0.111882, 1)
 layout_mode = 0
 offset_left = 9.0
@@ -49,7 +49,7 @@ offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="popup"]
+[node name="Label" type="Label" parent="popup" groups=["HUD"]]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

@@ -1,8 +1,7 @@
 extends Area3D
 
-
 @export var next_level = ""
-@export var HUD = get_tree().get_first_node_in_group("HUD")
+@onready var HUD = get_tree().get_first_node_in_group("HUD")
 
 func _on_body_entered(body:Node3D) -> void:
 	if body.is_in_group("Player"):
