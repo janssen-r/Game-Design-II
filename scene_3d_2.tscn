@@ -1,30 +1,39 @@
-[gd_scene load_steps=8 format=3 uid="uid://drbikimhdrjus"]
+[gd_scene load_steps=15 format=3 uid="uid://drbikimhdrjus"]
 
+[ext_resource type="Script" path="res://playerhud_3d.gd" id="1_2dws6"]
 [ext_resource type="PackedScene" uid="uid://1643kmvtvyxa" path="res://player_3d.tscn" id="1_v0bjb"]
 [ext_resource type="PackedScene" uid="uid://cyhhi5oaopvdf" path="res://playerhud_3d.tscn" id="2_rt5k3"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="3_s4ymj"]
+[ext_resource type="Resource" path="res://assets/Terrains/scene_3d_2/data.hterrain" id="4_7ybm1"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="4_fmb6g"]
 [ext_resource type="PackedScene" uid="uid://igyfjxsnqkda" path="res://sketchfab_scene.tscn" id="5_xelk4"]
+[ext_resource type="Texture2D" uid="uid://dpnmhebt2t54q" path="res://assets/Textures/Tiles093_1K-JPG/Tiles093_1K-JPG_Color.jpg" id="6_ta8yg"]
+[ext_resource type="Texture2D" uid="uid://btcjxibh4cqdl" path="res://assets/Textures/Rock057_1K-JPG/Rock057_1K-JPG_Color.jpg" id="7_5rfjf"]
+[ext_resource type="Texture2D" uid="uid://4g02ey14y2s6" path="res://assets/Textures/Tiles093_1K-JPG/Tiles093_1K-JPG_NormalGL.jpg" id="8_6agmc"]
+[ext_resource type="Texture2D" uid="uid://dlcfrax7m2klu" path="res://assets/Textures/Rock057_1K-JPG/Rock057_1K-JPG_NormalGL.jpg" id="9_6oe46"]
+[ext_resource type="PackedScene" uid="uid://dmbrnwu4bkk8h" path="res://enemy_3d.tscn" id="11_hxcio"]
 
 [sub_resource type="Resource" id="Resource_n4bnv"]
 script = ExtResource("4_fmb6g")
 mode = 0
-textures = [[], []]
+textures = [[ExtResource("6_ta8yg"), ExtResource("7_5rfjf")], [ExtResource("8_6agmc"), ExtResource("9_6oe46")]]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_d28o0"]
 size = Vector2(500, 500)
 
 [node name="scene_3d_2" type="Node3D"]
+script = ExtResource("1_2dws6")
 
 [node name="player3d" parent="." instance=ExtResource("1_v0bjb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.41177, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112.438, 15.1583, -9.77152)
 
 [node name="playerhud_3d" parent="." instance=ExtResource("2_rt5k3")]
 visible = false
 
 [node name="HTerrain" type="Node3D" parent="."]
 script = ExtResource("3_s4ymj")
-_terrain_data = null
+centered = true
+_terrain_data = ExtResource("4_7ybm1")
 chunk_size = 32
 collision_enabled = true
 collision_layer = 1
@@ -41,16 +50,20 @@ shader_params/u_triplanar = null
 shader_params/u_tile_reduction = null
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 103.881, 0)
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 226.457, 0)
 shadow_enabled = true
 sky_mode = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("5_xelk4")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -96.1978, 79.8977, 136.875)
+
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+visible = false
 calculate_tangents = false
 use_collision = true
 mesh = SubResource("PlaneMesh_d28o0")
 
-[node name="Sketchfab_Scene" parent="CSGMesh3D" instance=ExtResource("5_xelk4")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 4.89324, 77.5465)
+[node name="enemy3d" parent="." instance=ExtResource("11_hxcio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.5278, 56.6047, -25.4174)
