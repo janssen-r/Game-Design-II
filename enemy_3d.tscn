@@ -80,11 +80,11 @@ shape = SubResource("SphereShape3D_cymtq")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 material_override = SubResource("StandardMaterial3D_neayu")
-lifetime = 2.44
+lifetime = 15.44
 explosiveness = 1.0
 randomness = 0.24
 trail_enabled = true
-trail_lifetime = 0.01
+trail_lifetime = 4.19
 process_material = SubResource("ParticleProcessMaterial_s1ry4")
 draw_pass_1 = SubResource("PointMesh_lycbf")
 draw_skin = SubResource("Skin_nxj2k")

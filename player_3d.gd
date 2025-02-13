@@ -30,7 +30,7 @@ var MAX_HEALTH = 50
 var HEALTH = MAX_HEALTH
 var damage_lock = 0.0
 
-@onready var HUD = get_tree().get_first_node_in_group("HUD")
+@onready var HUD = $playerhud_3d
 var dmg_shader = preload("res://addons/zylann.hterrain/shaders/take_damage.tres") 
 
 @onready var model = $gobot

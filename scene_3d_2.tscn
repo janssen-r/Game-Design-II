@@ -1,8 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://drbikimhdrjus"]
+[gd_scene load_steps=14 format=3 uid="uid://drbikimhdrjus"]
 
-[ext_resource type="Script" path="res://playerhud_3d.gd" id="1_2dws6"]
 [ext_resource type="PackedScene" uid="uid://1643kmvtvyxa" path="res://player_3d.tscn" id="1_v0bjb"]
-[ext_resource type="PackedScene" uid="uid://cyhhi5oaopvdf" path="res://playerhud_3d.tscn" id="2_rt5k3"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="3_s4ymj"]
 [ext_resource type="Resource" path="res://assets/Terrains/scene_3d_2/data.hterrain" id="4_7ybm1"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="4_fmb6g"]
@@ -18,17 +16,24 @@ script = ExtResource("4_fmb6g")
 mode = 0
 textures = [[ExtResource("6_ta8yg"), ExtResource("7_5rfjf")], [ExtResource("8_6agmc"), ExtResource("9_6oe46")]]
 
+[sub_resource type="Environment" id="Environment_4wb8w"]
+background_mode = 1
+background_color = Color(0.886275, 0.0117647, 0, 1)
+glow_enabled = true
+glow_intensity = 2.15
+fog_enabled = true
+fog_light_color = Color(0.952941, 0, 0, 1)
+fog_density = 0.03
+adjustment_brightness = 8.0
+adjustment_contrast = 8.0
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_d28o0"]
 size = Vector2(500, 500)
 
 [node name="scene_3d_2" type="Node3D"]
-script = ExtResource("1_2dws6")
 
 [node name="player3d" parent="." instance=ExtResource("1_v0bjb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112.438, 15.1583, -9.77152)
-
-[node name="playerhud_3d" parent="." instance=ExtResource("2_rt5k3")]
-visible = false
 
 [node name="HTerrain" type="Node3D" parent="."]
 script = ExtResource("3_s4ymj")
@@ -55,6 +60,7 @@ shadow_enabled = true
 sky_mode = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_4wb8w")
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("5_xelk4")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -96.1978, 79.8977, 136.875)
@@ -67,3 +73,6 @@ mesh = SubResource("PlaneMesh_d28o0")
 
 [node name="enemy3d" parent="." instance=ExtResource("11_hxcio")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.5278, 56.6047, -25.4174)
+
+[node name="enemy3d2" parent="." instance=ExtResource("11_hxcio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.297, 9.21319, 14.3063)

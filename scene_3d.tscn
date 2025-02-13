@@ -1,7 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://diinejjdxr6s4"]
+[gd_scene load_steps=26 format=3 uid="uid://diinejjdxr6s4"]
 
 [ext_resource type="PackedScene" uid="uid://1643kmvtvyxa" path="res://player_3d.tscn" id="1_3h8s0"]
-[ext_resource type="PackedScene" uid="uid://cyhhi5oaopvdf" path="res://playerhud_3d.tscn" id="1_iuopn"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="2_b7oyl"]
 [ext_resource type="Resource" path="res://assets/Terrains/scene_3d/data.hterrain" id="3_5r6m8"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="4_1r4tq"]
@@ -49,8 +48,6 @@ textures = [[ExtResource("5_50o5b"), ExtResource("6_jkb8g"), ExtResource("7_60q2
 [sub_resource type="NavigationMesh" id="NavigationMesh_ohpwm"]
 
 [node name="scene_3d" type="Node3D"]
-
-[node name="playerhud_3d" parent="." instance=ExtResource("1_iuopn")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
