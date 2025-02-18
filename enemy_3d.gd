@@ -3,6 +3,7 @@ extends CharacterBody3D
 @onready var atk_area =  $AttackArea 
 @onready var dmg_area = $DamageArea
 @onready var nav_agent = $NavigationAgent3D
+# @onready var animator = MODEL W ANIMATIONS
 
 var SPEED = 7.0
 var ACCEL = 20
@@ -25,6 +26,12 @@ func _physics_process(delta: float) -> void:
 	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	
+	if velocity <= 0.1:
+		animator.play("Idle")
+	elif velocity <= 5:
+		animator.play("Walking")
+	else: animator.play("Running")
 	
 	nav_agent.target_position = global_position
 	

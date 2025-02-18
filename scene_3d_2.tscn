@@ -33,7 +33,7 @@ size = Vector2(500, 500)
 [node name="scene_3d_2" type="Node3D"]
 
 [node name="player3d" parent="." instance=ExtResource("1_v0bjb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112.438, 15.1583, -9.77152)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112.438, 12.8031, -9.77152)
 
 [node name="HTerrain" type="Node3D" parent="."]
 script = ExtResource("3_s4ymj")
