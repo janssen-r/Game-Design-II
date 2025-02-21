@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://dmbrnwu4bkk8h"]
+[gd_scene load_steps=13 format=3 uid="uid://dmbrnwu4bkk8h"]
 
 [ext_resource type="Script" path="res://enemy_3d.gd" id="1_0r05u"]
+[ext_resource type="PackedScene" uid="uid://b83t33l1mwsbj" path="res://assets/models/red/Probably Red from Everhood_.fbx" id="2_w8l8f"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6rc6y"]
 
@@ -56,6 +57,7 @@ script = ExtResource("1_0r05u")
 debug_enabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("CapsuleMesh_6rc6y")
 surface_material_override/0 = SubResource("StandardMaterial3D_p8rh3")
 
@@ -88,3 +90,45 @@ trail_lifetime = 4.19
 process_material = SubResource("ParticleProcessMaterial_s1ry4")
 draw_pass_1 = SubResource("PointMesh_lycbf")
 draw_skin = SubResource("Skin_nxj2k")
+
+[node name="Probably Red from Everhood_" parent="." instance=ExtResource("2_w8l8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0272677, 0, -0.898713)
+
+[node name="Skeleton3D" parent="Probably Red from Everhood_" index="1"]
+bones/0/position = Vector3(9.07946e-06, 0.906007, -0.00820273)
+bones/0/rotation = Quaternion(1.32872e-06, 1.11835e-06, -6.56835e-05, 1)
+bones/1/rotation = Quaternion(-0.0194322, -2.39448e-06, 6.56494e-05, 0.999811)
+bones/7/rotation = Quaternion(-0.544664, -0.447086, 0.56361, -0.431044)
+bones/8/rotation = Quaternion(-0.114956, -0.00496513, 0.0182363, 0.993191)
+bones/9/rotation = Quaternion(-2.75029e-07, -0.000346296, 3.35398e-07, 1)
+bones/10/rotation = Quaternion(0.010147, 0.233011, 0.0988009, 0.967389)
+bones/11/rotation = Quaternion(0.106978, 0.0832134, 0.202943, 0.969766)
+bones/12/rotation = Quaternion(-0.00113228, 0.0124603, -0.031943, 0.999411)
+bones/13/rotation = Quaternion(0.000410482, 0.00457654, 0.21048, 0.977587)
+bones/15/rotation = Quaternion(0.0203254, 0.0674479, -0.0914117, 0.993318)
+bones/16/rotation = Quaternion(-5.28991e-07, -8.48786e-05, -0.0109309, 0.99994)
+bones/17/rotation = Quaternion(-4.32506e-06, 0.000306439, -0.00302051, 0.999995)
+bones/19/rotation = Quaternion(0.0121501, -0.0120927, -0.10548, 0.994274)
+bones/20/rotation = Quaternion(-5.45196e-06, 0.000319557, -0.00298072, 0.999996)
+bones/21/rotation = Quaternion(0.000100464, 0.00519948, 0.0391432, 0.99922)
+bones/23/rotation = Quaternion(0.559213, -0.434709, 0.550075, 0.44241)
+bones/24/rotation = Quaternion(-0.116097, 0.00179224, 0.00829508, 0.993202)
+bones/25/rotation = Quaternion(-2.70488e-07, -8.60199e-05, 1.01115e-07, 1)
+bones/26/rotation = Quaternion(0.0116917, 0.322981, -0.0108043, 0.946271)
+bones/27/rotation = Quaternion(0.290282, -0.207882, 0.0163907, 0.933945)
+bones/28/rotation = Quaternion(0.00129482, 0.0103537, -0.0879692, 0.996069)
+bones/29/rotation = Quaternion(-0.000486547, 0.00376901, -0.163885, 0.986472)
+bones/31/rotation = Quaternion(-0.0151114, 0.0296063, -0.00645327, 0.999427)
+bones/32/rotation = Quaternion(5.48456e-06, -0.000158774, -0.00785881, 0.999969)
+bones/33/rotation = Quaternion(7.4923e-05, 0.00319274, 0.0641832, 0.997933)
+bones/35/rotation = Quaternion(-0.0145479, -0.00212717, 0.00972293, 0.999845)
+bones/36/rotation = Quaternion(1.30348e-05, 0.000753701, 0.0113696, 0.999935)
+bones/37/rotation = Quaternion(-4.09186e-05, 0.00264165, -0.0446022, 0.999001)
+bones/39/rotation = Quaternion(0.00137393, 0.0330963, 0.999382, -0.0117299)
+bones/40/rotation = Quaternion(-0.106104, 0.00268794, -0.024352, 0.994053)
+bones/41/rotation = Quaternion(0.515871, -0.00530284, 0.0186009, 0.856448)
+bones/44/rotation = Quaternion(-0.00144842, 0.0398968, 0.999136, 0.0115932)
+bones/45/rotation = Quaternion(-0.112934, -0.00267181, 0.0243252, 0.993301)
+bones/46/rotation = Quaternion(0.514795, 0.00528007, -0.0186756, 0.857094)
+
+[editable path="Probably Red from Everhood_"]
