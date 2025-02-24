@@ -27,11 +27,11 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
-	if velocity <= 0.1:
-		animator.play("Idle")
-	elif velocity <= 5:
-		animator.play("Walking")
-	else: animator.play("Running")
+	#if velocity <= 0.1:
+		#animator.play("Idle")
+	#elif velocity <= 5:
+		#animator.play("Walking")
+	#else: animator.play("Running")
 	
 	nav_agent.target_position = global_position
 	

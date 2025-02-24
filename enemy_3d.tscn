@@ -92,7 +92,7 @@ draw_pass_1 = SubResource("PointMesh_lycbf")
 draw_skin = SubResource("Skin_nxj2k")
 
 [node name="Probably Red from Everhood_" parent="." instance=ExtResource("2_w8l8f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0272677, 0, -0.898713)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027, 0, 0)
 
 [node name="Skeleton3D" parent="Probably Red from Everhood_" index="1"]
 bones/0/position = Vector3(9.07946e-06, 0.906007, -0.00820273)

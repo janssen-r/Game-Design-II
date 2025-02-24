@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://1643kmvtvyxa"]
+[gd_scene load_steps=11 format=3 uid="uid://1643kmvtvyxa"]
 
 [ext_resource type="Script" path="res://player_3d.gd" id="1_lkljd"]
 [ext_resource type="PackedScene" uid="uid://c15e1venl6qdo" path="res://assets/models/gobot.glb" id="2_nf4vv"]
@@ -11,6 +11,38 @@
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_1gsml"]
 height = 0.551627
 radius = 0.553288
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n280f"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dykan"]
+lifetime_randomness = 0.07
+inherit_velocity_ratio = 0.629
+spread = 180.0
+initial_velocity_max = 200.0
+linear_accel_min = -2.23517e-06
+linear_accel_max = 55.38
+tangential_accel_min = -2.23517e-06
+tangential_accel_max = 32.31
+scale_min = 277.92
+scale_max = 993.31
+scale_over_velocity_max = 423.08
+color = Color(1, 0.247059, 0.121569, 1)
+anim_speed_max = 9.48
+turbulence_enabled = true
+turbulence_noise_strength = 9.48
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.33
+sub_emitter_mode = 1
+sub_emitter_frequency = 100.0
+
+[sub_resource type="PointMesh" id="PointMesh_rkof4"]
+
+[sub_resource type="Skin" id="Skin_mtuj3"]
+bind_count = 1
+bind/0/name = &""
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="player3d" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_lkljd")
@@ -49,3 +81,15 @@ transform = Transform3D(1.055, 0, 0, 0, 1.055, 0, 0, 0, 1.055, 0, -0.845563, 0)
 shape = SubResource("CylinderShape3D_1gsml")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+material_override = SubResource("StandardMaterial3D_n280f")
+amount = 40
+lifetime = 15.44
+explosiveness = 1.0
+randomness = 0.24
+trail_enabled = true
+trail_lifetime = 4.19
+process_material = SubResource("ParticleProcessMaterial_dykan")
+draw_pass_1 = SubResource("PointMesh_rkof4")
+draw_skin = SubResource("Skin_mtuj3")

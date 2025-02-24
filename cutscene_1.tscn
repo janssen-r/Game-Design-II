@@ -1,0 +1,160 @@
+[gd_scene load_steps=8 format=3 uid="uid://vp7ur14083ea"]
+
+[ext_resource type="PackedScene" uid="uid://ky1c68msul05" path="res://assets/models/city/city_scene_tokyo.glb" id="1_8u4mq"]
+[ext_resource type="PackedScene" uid="uid://dyqhrv7qtdrkh" path="res://assets/cutscenes/scene1/char_with_anim.glb" id="2_0luhp"]
+
+[sub_resource type="Environment" id="Environment_ptxgu"]
+background_mode = 1
+background_color = Color(0.88, 0.499107, 0.4488, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rg2l7"]
+
+[sub_resource type="Animation" id="Animation_yp3uw"]
+resource_name = "cutscene1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00833333, 1.00833),
+"transitions": PackedFloat32Array(2.46229, 2.46229),
+"update": 0,
+"values": [Vector3(5.06107, 2.07381, 7.98753), Vector3(8.30664, 2.07381, 7.98753)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterBody3D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CharacterBody3D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/5/type = "animation"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CharacterBody3D/AuxScene/AnimationPlayer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": PackedStringArray(),
+"times": PackedFloat32Array()
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Camera3D:fov")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_l7yuo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_430th"]
+_data = {
+"RESET": SubResource("Animation_l7yuo"),
+"cutscene1": SubResource("Animation_yp3uw")
+}
+
+[node name="cutscene1" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ptxgu")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_8u4mq")]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="AuxScene" parent="CharacterBody3D" instance=ExtResource("2_0luhp")]
+transform = Transform3D(0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, 0, 0.535551, 0.884892)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_rg2l7")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.70948, 20.0462, 0)
+light_color = Color(1, 0.519, 0.22, 1)
+light_energy = 1.432
+light_indirect_energy = 1.4
+
+[node name="Camera3D" type="Camera3D" parent="."]
+fov = 64.5991
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_430th")
+}
+autoplay = "cutscene1"
+
+[editable path="CharacterBody3D/AuxScene"]
