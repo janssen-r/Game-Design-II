@@ -10,6 +10,8 @@ func _ready() -> void:
 	alarm.position_y += randf_range(-20,20)
 	alarm.position_z += randf_range(-20,20)
 	
+	
+	
 	await get_tree().create_timer($AnimationPlayer.current_animation_length).timeout
 	get_tree().quit()
 	

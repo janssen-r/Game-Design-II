@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://qeilcp0bnebs"
+path="res://.godot/imported/S31-Cracked Out Robot.ogg-b0e65a0e06531765b5eab1552c471465.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/music/S31-Cracked Out Robot.ogg"
+dest_files=["res://.godot/imported/S31-Cracked Out Robot.ogg-b0e65a0e06531765b5eab1552c471465.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
