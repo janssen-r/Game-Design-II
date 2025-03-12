@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://drbikimhdrjus"]
 
 [ext_resource type="PackedScene" uid="uid://1643kmvtvyxa" path="res://player_3d.tscn" id="1_v0bjb"]
-[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="3_s4ymj"]
-[ext_resource type="Resource" path="res://assets/Terrains/scene_3d_2/data.hterrain" id="4_7ybm1"]
-[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="4_fmb6g"]
+[ext_resource type="Script" uid="uid://p7r1d3in7oex" path="res://addons/zylann.hterrain/hterrain.gd" id="3_s4ymj"]
+[ext_resource type="Resource" uid="uid://plw45i3a2kfw" path="res://assets/Terrains/scene_3d_2/data.hterrain" id="4_7ybm1"]
+[ext_resource type="Script" uid="uid://cfl6vput0ktc5" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="4_fmb6g"]
 [ext_resource type="PackedScene" uid="uid://igyfjxsnqkda" path="res://sketchfab_scene.tscn" id="5_xelk4"]
 [ext_resource type="Texture2D" uid="uid://dpnmhebt2t54q" path="res://assets/Textures/Tiles093_1K-JPG/Tiles093_1K-JPG_Color.jpg" id="6_ta8yg"]
 [ext_resource type="Texture2D" uid="uid://btcjxibh4cqdl" path="res://assets/Textures/Rock057_1K-JPG/Rock057_1K-JPG_Color.jpg" id="7_5rfjf"]

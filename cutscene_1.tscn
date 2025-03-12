@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://vp7ur14083ea"]
 
 [ext_resource type="PackedScene" uid="uid://ky1c68msul05" path="res://assets/models/city/city_scene_tokyo.glb" id="1_8u4mq"]
-[ext_resource type="Script" path="res://cutscene_1.gd" id="1_uy7rh"]
+[ext_resource type="Script" uid="uid://dagy1erlpqijw" path="res://cutscene_1.gd" id="1_uy7rh"]
 [ext_resource type="PackedScene" uid="uid://dyqhrv7qtdrkh" path="res://assets/cutscenes/scene1/char_with_anim.glb" id="2_0luhp"]
 [ext_resource type="AudioStream" uid="uid://ce8tmu2pedw7h" path="res://assets/audio/sfx/alarms/zapsplat_science_fiction_alarm_emergency_fast_112225.mp3" id="4_2wdfc"]
 [ext_resource type="AudioStream" uid="uid://daokdkfsooe0b" path="res://assets/audio/sfx/alarms/zapsplat_science_fiction_alarm_small_warning_danger_113068.mp3" id="5_0n6ub"]
@@ -214,8 +214,8 @@ tracks/7/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_430th"]
 _data = {
-"RESET": SubResource("Animation_l7yuo"),
-"cutscene1": SubResource("Animation_yp3uw")
+&"RESET": SubResource("Animation_l7yuo"),
+&"cutscene1": SubResource("Animation_yp3uw")
 }
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_5svds"]
@@ -248,7 +248,7 @@ light_energy = 1.432
 light_indirect_energy = 1.4
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.64011, 0.768283, 0, -0.768283, 0.64011, 9.45542, 4.04774, 10.2717)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 fov = 48.6969
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="Camera3D"]
