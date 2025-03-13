@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cqjg62h43ae5"]
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://chc6edqahhe5b"]
 
 [ext_resource type="Shader" uid="uid://hr2f6axo2tsw" path="res://addons/zylann.hterrain/shaders/take_damage.gdshader" id="1_my1x6"]
 

@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2hv3elprw2ee"]
+[gd_scene load_steps=6 format=3 uid="uid://2gl0swpkyfjy"]
+
+[ext_resource type="Script" uid="uid://cmybobh76ymrh" path="res://fps_player_template.gd" id="1_uw4s0"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_s15q6"]
 
@@ -14,6 +16,7 @@ metallic = 1.0
 metallic_specular = 1.0
 
 [node name="fps_player" type="CharacterBody3D" groups=["Player"]]
+script = ExtResource("1_uw4s0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_s15q6")
