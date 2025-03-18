@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0pyg04wypxn5"]
+[gd_scene load_steps=5 format=3 uid="uid://c0pyg04wypxn5"]
 
 [ext_resource type="PackedScene" uid="uid://2gl0swpkyfjy" path="res://fps_player_template.tscn" id="2_67qoq"]
 [ext_resource type="PackedScene" uid="uid://cntpwfsd1wdfn" path="res://de_dust_2.tscn" id="2_mk8pn"]
 [ext_resource type="PackedScene" uid="uid://cfa5jhcsloa5w" path="res://fps_enemy_template.tscn" id="3_67qoq"]
 
+[sub_resource type="Environment" id="Environment_67qoq"]
+ambient_light_color = Color(0.784314, 0.447059, 0.101961, 1)
+
 [node name="FpsWorld1" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_67qoq")
 
 [node name="fps_player" parent="." instance=ExtResource("2_67qoq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4, 0)
@@ -14,3 +20,5 @@ transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0, 0, 0)
 
 [node name="fps_enemy" parent="." instance=ExtResource("3_67qoq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.82093, 1.53791, 17.9817)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
