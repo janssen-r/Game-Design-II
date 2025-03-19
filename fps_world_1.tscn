@@ -6,6 +6,7 @@
 
 [sub_resource type="Environment" id="Environment_67qoq"]
 ambient_light_color = Color(0.784314, 0.447059, 0.101961, 1)
+tonemap_mode = 3
 
 [node name="FpsWorld1" type="Node3D"]
 
@@ -19,6 +20,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4, 0)
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0, 0, 0)
 
 [node name="fps_enemy" parent="." instance=ExtResource("3_67qoq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.82093, 1.53791, 17.9817)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9133, 1.71616, 14.3621)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="fps_enemy2" parent="." instance=ExtResource("3_67qoq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.6109, 1.67275, -80.3173)
+
+[node name="fps_enemy3" parent="." instance=ExtResource("3_67qoq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.875, 5.20355, -74.6257)
+
+[node name="fps_enemy4" parent="." instance=ExtResource("3_67qoq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.60317, 0.347399, -35.1402)
