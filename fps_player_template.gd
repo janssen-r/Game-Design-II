@@ -59,8 +59,10 @@ var target_pos  = unaim_pos
 var target_quat = unaim_quat  # rotation
 var target_fov  = unaim_fov
 
-# TODO: audio
-
+@onready var audio_player = $AudioStreamPlayer3D
+var reload_sound = preload("res://assets/audio/sfx/fps/recharge.mp3")
+var hit_sound = preload("res://assets/audio/sfx/fps/hitHurt.wav")
+var dink_sound = preload("res://assets/audio/sfx/fps/hitHead.wav")
 
 func degrees_to_radians(degrees: Vector3) -> Vector3:
 	return Vector3(
@@ -127,7 +129,8 @@ func _physics_process(delta):
 	  (Input.is_action_just_pressed("fire") and AMMO == 0):
 		if TOTAL_AMMO > 0 and not is_reloading and AMMO != CLIP_SIZE:
 			is_reloading = true
-			# TODO: play sound
+			audio_player.stream = reload_sound
+			audio_player.play()
 			await get_tree().create_timer(2).timeout
 			var ammo_needed = CLIP_SIZE - AMMO
 			var new_ammo = min(ammo_needed, TOTAL_AMMO)

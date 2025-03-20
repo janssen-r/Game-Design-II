@@ -18,7 +18,10 @@ var dart_scene = preload("res://fps_dart.tscn")
 var spray_lock = 0.0
 var SPRAY_AMOUNT = 0.08  # 0.03
 
-# TODO: audio
+@onready var audio_player = $AudioStreamPlayer3D
+var hit_sound = preload("res://assets/audio/sfx/fps/hitHurt.wav")
+var dink_sound = preload("res://assets/audio/sfx/fps/hitHead.wav")
+
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") * 1.5
 
@@ -53,7 +56,8 @@ func _physics_process(delta):
 	if nav_agent.target_position == Vector3.ZERO:
 		velocity = Vector3.ZERO
 	
-	# TODO: health label
+	$lblHealth.text = "%d/%d" % [int(HEALTH), MAX_HEALTH]
+	$lblHealth.rotation.y = dir.x
 	if dir != Vector3.ZERO:
 		var angle_to_dir = atan2(dir.x, dir.z)
 		rotation.y = lerp_angle(rotation.y, angle_to_dir, 0.1)
@@ -72,8 +76,10 @@ func take_damage(dmg, override=false, headshot=false, spawn_origin=null):
 			if randi_range(0, 100) > 66.6:
 				nav_agent.target_position = spawn_origin
 				$HuntTimer.start()
-		# TODO: sound
-
+		if audio_player.playing:
+			await audio_player.finished
+		audio_player.stream = dink_sound if headshot else hit_sound
+		audio_player.play()
 
 func _on_timer_timeout() -> void:
 	nav_agent.target_position = Vector3.ZERO  # Or a random 3D vector
