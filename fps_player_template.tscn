@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://2gl0swpkyfjy"]
+[gd_scene load_steps=8 format=3 uid="uid://2gl0swpkyfjy"]
 
 [ext_resource type="Script" uid="uid://cmybobh76ymrh" path="res://fps_player_template.gd" id="1_uw4s0"]
 
@@ -14,6 +14,16 @@ metallic = 1.0
 albedo_color = Color(1, 0.207843, 0.054902, 1)
 metallic = 1.0
 metallic_specular = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_uw4s0"]
+font_size = 32
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rsyyf"]
+font_size = 30
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [node name="fps_player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_uw4s0")
@@ -43,3 +53,90 @@ transform = Transform3D(1, 2.32831e-10, 5.82077e-11, 1.16415e-10, -2.98023e-08, 
 radius = 0.0568142
 height = 0.14681
 material = SubResource("StandardMaterial3D_aak7c")
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="healthcontainer" type="HBoxContainer" parent="HUD/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="healthtext" type="Label" parent="HUD/MarginContainer/healthcontainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Health: "
+label_settings = SubResource("LabelSettings_uw4s0")
+vertical_alignment = 1
+
+[node name="lblHealth" type="Label" parent="HUD/MarginContainer/healthcontainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "100/100"
+label_settings = SubResource("LabelSettings_uw4s0")
+vertical_alignment = 1
+
+[node name="ammocontainer" type="HBoxContainer" parent="HUD/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="ammotext" type="Label" parent="HUD/MarginContainer/ammocontainer"]
+layout_mode = 2
+text = "Ammo: "
+label_settings = SubResource("LabelSettings_uw4s0")
+
+[node name="lblAmmo" type="Label" parent="HUD/MarginContainer/ammocontainer"]
+layout_mode = 2
+text = "0/0"
+label_settings = SubResource("LabelSettings_uw4s0")
+
+[node name="overlay" type="ColorRect" parent="HUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="SHADER TEST" type="ColorRect" parent="HUD"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Crosshair" type="Label" parent="HUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "+"
+label_settings = SubResource("LabelSettings_rsyyf")
+horizontal_alignment = 1
+vertical_alignment = 1

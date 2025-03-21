@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cec5yt22f8aqh"]
+[gd_scene load_steps=7 format=3 uid="uid://cec5yt22f8aqh"]
 
 [ext_resource type="Script" uid="uid://bv0iqkyimkgag" path="res://fps_dart.gd" id="1_gylib"]
 [ext_resource type="AudioStream" uid="uid://c5vejwnlvu1gd" path="res://assets/audio/sfx/fps/fire.wav" id="2_ke3cv"]
@@ -9,6 +9,10 @@ albedo_color = Color(0.247059, 0.52549, 0.909804, 1)
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_gylib"]
 height = 0.095
 radius = 0.02
+
+[sub_resource type="PointMesh" id="PointMesh_ke3cv"]
+
+[sub_resource type="Skin" id="Skin_pdg0w"]
 
 [node name="fps_dart" type="RigidBody3D"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
@@ -35,5 +39,9 @@ stream = ExtResource("2_ke3cv")
 volume_db = -15.0
 autoplay = true
 doppler_tracking = 2
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+draw_pass_1 = SubResource("PointMesh_ke3cv")
+draw_skin = SubResource("Skin_pdg0w")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
