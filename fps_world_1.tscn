@@ -40,3 +40,6 @@ light_color = Color(1, 1, 0.823529, 1)
 light_energy = 1.1
 light_indirect_energy = 0.8
 light_specular = 2.0
+
+[node name="fps_enemy5" parent="." instance=ExtResource("3_67qoq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.0372, 1.93536, -35.5105)

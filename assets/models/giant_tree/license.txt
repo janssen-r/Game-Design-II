@@ -1,0 +1,11 @@
+Model Information:
+* title:	Giant Tree
+* source:	https://sketchfab.com/3d-models/giant-tree-00f7ce2e8f0a4a2bb76682f1123af678
+* author:	p3polygonn (https://sketchfab.com/p3polygon)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Giant Tree" (https://sketchfab.com/3d-models/giant-tree-00f7ce2e8f0a4a2bb76682f1123af678) by p3polygonn (https://sketchfab.com/p3polygon) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://cyg76ju2xelfy"]
+
+[ext_resource type="PackedScene" uid="uid://t6cl5yejjsr2" path="res://assets/models/giant_tree/scene.gltf" id="1_k02tw"]
+[ext_resource type="PackedScene" uid="uid://2gl0swpkyfjy" path="res://fps_player_template.tscn" id="2_1xlax"]
+[ext_resource type="PackedScene" uid="uid://cfa5jhcsloa5w" path="res://fps_enemy_template.tscn" id="3_gtcvr"]
+
+[sub_resource type="Gradient" id="Gradient_1xlax"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_gtcvr"]
+gradient = SubResource("Gradient_1xlax")
+width = 2
+
+[sub_resource type="Environment" id="Environment_vkb1x"]
+tonemap_exposure = 2.0
+adjustment_color_correction = SubResource("GradientTexture1D_gtcvr")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_k02tw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.809039, 0, -0.981313)
+
+[node name="fps_player" parent="." instance=ExtResource("2_1xlax")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.646, 7.66813, 2.04101)
+
+[node name="fps_enemy" parent="." instance=ExtResource("3_gtcvr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.69871, 5.2762, 8.22375)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vkb1x")
