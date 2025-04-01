@@ -14,7 +14,6 @@ var inertia = Vector3()
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") * 1.5
 
-
 @onready var camera = $Head/Camera3D
 var CAM_SENSITIVITY = 0.02
 const BOB_FREQ = 2.4
@@ -85,6 +84,7 @@ func euler_degrees_to_quat(euler_degrees: Vector3) -> Quaternion:
 
 
 func _physics_process(delta):
+	Window.MSAA_MAX
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -214,6 +214,7 @@ func take_damage(dmg, override=false, headshot=false, _spawn_origin=null):
 		$HUD/overlay.material = damage_shader.duplicate()
 		$HUD/overlay.material.set_shader_parameter("intensity", dmg_intensity)
 		# TODO: play sound
+		
 
 
 func headbob(time):

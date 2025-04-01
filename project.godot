@@ -28,6 +28,7 @@ enabled=PackedStringArray("res://addons/zylann.hterrain/plugin.cfg")
 
 Interact=""
 HUD=""
+Dart=""
 
 [input]
 

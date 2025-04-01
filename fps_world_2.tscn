@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cyg76ju2xelfy"]
+[gd_scene load_steps=8 format=3 uid="uid://cyg76ju2xelfy"]
 
-[ext_resource type="PackedScene" uid="uid://t6cl5yejjsr2" path="res://assets/models/giant_tree/scene.gltf" id="1_k02tw"]
+[ext_resource type="PackedScene" uid="uid://btaskv4kc27ot" path="res://giant_tree.tscn" id="1_1xlax"]
+[ext_resource type="Script" uid="uid://cnx1qh654k61n" path="res://fps_world_2.gd" id="1_gtcvr"]
 [ext_resource type="PackedScene" uid="uid://2gl0swpkyfjy" path="res://fps_player_template.tscn" id="2_1xlax"]
 [ext_resource type="PackedScene" uid="uid://cfa5jhcsloa5w" path="res://fps_enemy_template.tscn" id="3_gtcvr"]
 
@@ -11,19 +12,34 @@ gradient = SubResource("Gradient_1xlax")
 width = 2
 
 [sub_resource type="Environment" id="Environment_vkb1x"]
-tonemap_exposure = 2.0
 adjustment_color_correction = SubResource("GradientTexture1D_gtcvr")
 
-[node name="Node3D" type="Node3D"]
+[node name="fpsWorld2" type="Node3D"]
+script = ExtResource("1_gtcvr")
 
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_k02tw")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.809039, 0, -0.981313)
+[node name="giant_tree" parent="." instance=ExtResource("1_1xlax")]
+transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, 0, 0, 0)
 
 [node name="fps_player" parent="." instance=ExtResource("2_1xlax")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.646, 7.66813, 2.04101)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.4463, 6.90935, 2.04101)
 
 [node name="fps_enemy" parent="." instance=ExtResource("3_gtcvr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.69871, 5.2762, 8.22375)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6387, 5.42359, 41.9451)
+
+[node name="fps_enemy2" parent="." instance=ExtResource("3_gtcvr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4011, 6.57839, -32.4318)
+
+[node name="fps_enemy3" parent="." instance=ExtResource("3_gtcvr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.77228, 10.2593, -48.7662)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_vkb1x")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 77.5838, 451.57)
+light_color = Color(1, 0.85098, 0.635294, 1)
+light_indirect_energy = 0.8
+light_specular = 0.3
+light_bake_mode = 1
+shadow_enabled = true
+shadow_blur = 1.3
