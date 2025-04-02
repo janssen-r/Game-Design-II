@@ -1,21 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://cyg76ju2xelfy"]
+[gd_scene load_steps=7 format=3 uid="uid://cyg76ju2xelfy"]
 
 [ext_resource type="PackedScene" uid="uid://btaskv4kc27ot" path="res://giant_tree.tscn" id="1_1xlax"]
-[ext_resource type="Script" uid="uid://cnx1qh654k61n" path="res://fps_world_2.gd" id="1_gtcvr"]
 [ext_resource type="PackedScene" uid="uid://2gl0swpkyfjy" path="res://fps_player_template.tscn" id="2_1xlax"]
 [ext_resource type="PackedScene" uid="uid://cfa5jhcsloa5w" path="res://fps_enemy_template.tscn" id="3_gtcvr"]
 
 [sub_resource type="Gradient" id="Gradient_1xlax"]
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_gtcvr"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1xlax"]
 gradient = SubResource("Gradient_1xlax")
 width = 2
 
 [sub_resource type="Environment" id="Environment_vkb1x"]
-adjustment_color_correction = SubResource("GradientTexture1D_gtcvr")
+adjustment_color_correction = SubResource("GradientTexture1D_1xlax")
 
 [node name="fpsWorld2" type="Node3D"]
-script = ExtResource("1_gtcvr")
 
 [node name="giant_tree" parent="." instance=ExtResource("1_1xlax")]
 transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, 0, 0, 0)
