@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://drjvo2upb6r1e"
+path.s3tc="res://.godot/imported/fps_map_ghost_city_51.png-13934bf8e2981269d370d6bdc19184b8.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "7f6a46629f8b30769c6597644ef2ed44"
+}
+
+[deps]
+
+source_file="res://assets/models/Ghost City/fps_map_ghost_city_51.png"
+dest_files=["res://.godot/imported/fps_map_ghost_city_51.png-13934bf8e2981269d370d6bdc19184b8.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://assets/models/Ghost City/fps_map_ghost_city_51.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

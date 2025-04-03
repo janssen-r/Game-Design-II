@@ -1,21 +1,46 @@
-[gd_scene load_steps=3 format=3 uid="uid://ddie8ick4kfk7"]
+[gd_scene load_steps=5 format=3 uid="uid://ddie8ick4kfk7"]
 
 [ext_resource type="PackedScene" uid="uid://2gl0swpkyfjy" path="res://fps_player_template.tscn" id="1_5q8jc"]
+[ext_resource type="PackedScene" uid="uid://bc2881jlf7hul" path="res://city.tscn" id="2_djp0f"]
+[ext_resource type="PackedScene" uid="uid://cfa5jhcsloa5w" path="res://fps_enemy_template.tscn" id="3_djp0f"]
 
 [sub_resource type="Environment" id="Environment_w3pdo"]
+glow_enabled = true
+glow_intensity = 0.0
+glow_bloom = 0.6
+fog_enabled = true
+fog_light_color = Color(0.156863, 0.137255, 0.2, 1)
+fog_light_energy = 0.7
+fog_density = 0.02
 
 [node name="fps_world_3" type="Node3D"]
 
 [node name="fps_player" parent="." instance=ExtResource("1_5q8jc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.4463, 15.9212, 2.04101)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.4463, 2.3499, 8.3222)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 77.5838, 451.57)
-light_indirect_energy = 0.8
-light_specular = 0.3
-light_bake_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.1038, 21.2624, 27.7456)
+light_color = Color(0.392793, 0.406145, 0.898047, 1)
+light_indirect_energy = 0.0
 shadow_enabled = true
-shadow_blur = 1.3
+directional_shadow_mode = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_w3pdo")
+
+[node name="city" parent="." instance=ExtResource("2_djp0f")]
+
+[node name="fps_enemy" parent="." instance=ExtResource("3_djp0f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.6687, 0.818026, -6.28677)
+
+[node name="fps_enemy2" parent="." instance=ExtResource("3_djp0f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.6676, 0.990789, 15.0338)
+
+[node name="fps_enemy3" parent="." instance=ExtResource("3_djp0f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.95176, -1.39345, 64.8516)
+
+[node name="fps_enemy4" parent="." instance=ExtResource("3_djp0f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.52607, -1.39345, 37.4794)
+
+[node name="fps_enemy5" parent="." instance=ExtResource("3_djp0f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.9259, 0.836674, 19.2112)
