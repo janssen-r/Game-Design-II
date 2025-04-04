@@ -4,6 +4,7 @@ extends CharacterBody3D
 var SPEED = 7.0
 var NORMAL_SPEED = SPEED
 var WALK_SPEED = 4.0
+var SLIDE_SPEED = 15.0
 var JUMP_VELOCITY = 7.0
 
 var MAX_HEALTH = 100
@@ -63,6 +64,9 @@ var reload_sound = preload("res://assets/audio/sfx/fps/recharge.mp3")
 var hit_sound = preload("res://assets/audio/sfx/fps/hitHurt.wav")
 var dink_sound = preload("res://assets/audio/sfx/fps/hitHead.wav")
 
+@onready var front_ray = $groundCheck/groundCheckFront
+@onready var back_ray = $groundCheck/groundCheckBack
+
 func degrees_to_radians(degrees: Vector3) -> Vector3:
 	return Vector3(
 		deg_to_rad(degrees.x),
@@ -95,6 +99,10 @@ func _physics_process(delta):
 
 	if Input.is_action_pressed("walk") or Input.is_action_pressed("crouch"):
 		SPEED = WALK_SPEED
+	elif front_ray.is_colliding() == false and back_ray.is_colliding() == true and Input.is_action_pressed("slide"):
+		SPEED = SLIDE_SPEED
+		if $groundCheck/groundCheckBelow.is_colliding() == true:
+			self.position.y = $groundCheck/groundCheckBelow.get_collision_point().y
 	else:
 		SPEED = NORMAL_SPEED
 	
@@ -163,6 +171,10 @@ func _physics_process(delta):
 		cur_quat.slerp(target_quat, delta*10.0).get_euler()
 	)
 	
+	# if front_ray.is_colliding() == false and back_ray.is_colliding() == true and Input.is_action_pressed("slide"):
+		# SPEED = SLIDE_SPEED
+		# AMMO += 1
+	
 	if Input.is_action_pressed("crouch"):
 		$CollisionShape3D.shape.height = CROUCH_HEIGHT + 0.05
 		$CollisionShape3D.shape.radius = CROUCH_COLLISION_RAD
@@ -170,6 +182,19 @@ func _physics_process(delta):
 		$Head.position.y = lerp($Head.position.y, CROUCH_HEAD, delta*5.0)
 		SPRAY_AMOUNT = CROUCH_SPRAY_AMOUNT
 	if Input.is_action_just_released("crouch"):
+		$CollisionShape3D.shape.height = NORMAL_HEIGHT
+		$CollisionShape3D.shape.radius = NORMAL_COLLISION_RAD
+		$MeshInstance3D.scale.y = 1.0
+		$Head.position.y = lerp($Head.position.y, NORMAL_HEAD, delta*5.0)
+		SPRAY_AMOUNT = NORMAL_SPRAY_AMOUNT
+	
+	if Input.is_action_pressed("slide"):
+		$CollisionShape3D.shape.height = CROUCH_HEIGHT + 0.05
+		$CollisionShape3D.shape.radius = CROUCH_COLLISION_RAD
+		$MeshInstance3D.scale.y = CROUCH_HEIGHT/NORMAL_HEIGHT
+		$Head.position.y = lerp($Head.position.y, CROUCH_HEAD, delta*5.0)
+		SPRAY_AMOUNT = CROUCH_SPRAY_AMOUNT
+	if Input.is_action_just_released("slide"):
 		$CollisionShape3D.shape.height = NORMAL_HEIGHT
 		$CollisionShape3D.shape.radius = NORMAL_COLLISION_RAD
 		$MeshInstance3D.scale.y = 1.0

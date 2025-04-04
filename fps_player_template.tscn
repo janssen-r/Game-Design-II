@@ -140,3 +140,20 @@ text = "+"
 label_settings = SubResource("LabelSettings_rsyyf")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="groundCheck" type="Node3D" parent="."]
+
+[node name="groundCheckFront" type="RayCast3D" parent="groundCheck"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, -0.5)
+collide_with_areas = true
+debug_shape_thickness = 5
+
+[node name="groundCheckBelow" type="RayCast3D" parent="groundCheck"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07, 0)
+collide_with_areas = true
+debug_shape_thickness = 5
+
+[node name="groundCheckBack" type="RayCast3D" parent="groundCheck"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0.5)
+collide_with_areas = true
+debug_shape_thickness = 5
