@@ -1,0 +1,828 @@
+[gd_scene load_steps=207 format=3 uid="uid://csayobpsa3tfw"]
+
+[ext_resource type="ArrayMesh" uid="uid://c1c7johh8u7lk" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Fence_Curve_1x1.obj" id="1_sfngo"]
+[ext_resource type="ArrayMesh" uid="uid://capwfrbnnser6" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Fence_Curve_2x2.obj" id="2_y14jk"]
+[ext_resource type="ArrayMesh" uid="uid://d30tyom3y4sp4" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Fence_Curve_3x3.obj" id="3_ajtgo"]
+[ext_resource type="ArrayMesh" uid="uid://dwwmyd245y2ob" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Fence_Curve_3x4.obj" id="4_jdgdj"]
+[ext_resource type="ArrayMesh" uid="uid://cb4kyr6guhm71" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Fence_Curve_4x4.obj" id="5_87j3j"]
+[ext_resource type="ArrayMesh" uid="uid://oa62hksb37c" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Fence_Curve_4x5.obj" id="6_6ttno"]
+[ext_resource type="ArrayMesh" uid="uid://5cqxmcyehvbl" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Fence_Curve_5x5.obj" id="7_tnvun"]
+[ext_resource type="ArrayMesh" uid="uid://dlo8y47il4mus" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Fence_Curve_5x6.obj" id="8_3esuw"]
+[ext_resource type="ArrayMesh" uid="uid://bomjkfqockvww" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Fence_Esse_2x3.obj" id="9_b4ink"]
+[ext_resource type="ArrayMesh" uid="uid://bpd8m8844jxt5" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Fence_Gate_1.obj" id="10_sjfxg"]
+[ext_resource type="ArrayMesh" uid="uid://dycmy7ewdyyhm" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Fence_Gate_2.obj" id="11_inglo"]
+[ext_resource type="ArrayMesh" uid="uid://baeabgeqmfvkb" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Fence_Hill.obj" id="12_lcun7"]
+[ext_resource type="ArrayMesh" uid="uid://db8l1hljp1oyf" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Fence_Post.obj" id="13_7qkiv"]
+[ext_resource type="ArrayMesh" uid="uid://c0o1frrer4ifl" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Fence_Railing.obj" id="14_samvl"]
+[ext_resource type="ArrayMesh" uid="uid://v7afy8j7ngu3" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Hay_Bale_Barrel.obj" id="15_qf346"]
+[ext_resource type="ArrayMesh" uid="uid://c0lnidjr7hti8" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Hay_Bale_Box.obj" id="16_joc1t"]
+[ext_resource type="ArrayMesh" uid="uid://byg8v74i1jm0k" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Hay_Pile.obj" id="17_bqmma"]
+[ext_resource type="ArrayMesh" uid="uid://dy7a1jks11dia" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Hay_Pile_Pitchfork.obj" id="18_qnw7s"]
+[ext_resource type="ArrayMesh" uid="uid://kikj6nr1aeeq" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Hay_Pitchfork.obj" id="19_58pfx"]
+[ext_resource type="ArrayMesh" uid="uid://bcjtbvsn6ewrr" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Lighthouse.obj" id="20_wfmcb"]
+[ext_resource type="ArrayMesh" uid="uid://dgjjqmk2uj103" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Rock_1.obj" id="21_lpir6"]
+[ext_resource type="ArrayMesh" uid="uid://dw0m5kf6dkp6y" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Rock_2.obj" id="22_a6shn"]
+[ext_resource type="ArrayMesh" uid="uid://cjnpm2kjtlgea" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Rock_3.obj" id="23_sq2ci"]
+[ext_resource type="ArrayMesh" uid="uid://cbp8slj38ic4n" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Rock_4.obj" id="24_em6i2"]
+[ext_resource type="ArrayMesh" uid="uid://ctnm33g5isbp1" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Rock_5.obj" id="25_pcain"]
+[ext_resource type="ArrayMesh" uid="uid://bufqqbnogqew" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Rock_6.obj" id="26_71l1u"]
+[ext_resource type="ArrayMesh" uid="uid://cflvfyjlod1rb" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Rock_7.obj" id="27_42xrf"]
+[ext_resource type="ArrayMesh" uid="uid://b0ri6po5j3trn" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Rock_8.obj" id="28_ncxoj"]
+[ext_resource type="ArrayMesh" uid="uid://b1coveidtckp2" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Tree_Cedar_1.obj" id="29_0njrv"]
+[ext_resource type="ArrayMesh" uid="uid://b756iicak8y17" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Tree_Cedar_2.obj" id="30_kf8vn"]
+[ext_resource type="ArrayMesh" uid="uid://c65kvphq6hyjr" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Tree_Cedar_3.obj" id="31_behcb"]
+[ext_resource type="ArrayMesh" uid="uid://rowlwti2ifcx" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Tree_Elm_1.obj" id="32_u50gk"]
+[ext_resource type="ArrayMesh" uid="uid://dhkwy2hww5xbc" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Tree_Elm_2.obj" id="33_ki2tu"]
+[ext_resource type="ArrayMesh" uid="uid://dksqqhh32nq0d" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Tree_Elm_3.obj" id="34_wowgu"]
+[ext_resource type="ArrayMesh" uid="uid://0b16v4dvnid5" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Tree_Elm_4.obj" id="35_hnj62"]
+[ext_resource type="ArrayMesh" uid="uid://byhymhxwxp57a" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Tree_Elm_5.obj" id="36_xpne5"]
+[ext_resource type="ArrayMesh" uid="uid://dpy2dyjprrpxe" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Tree_Elm_6.obj" id="37_fs4mj"]
+[ext_resource type="ArrayMesh" uid="uid://bee1qs8fqe34w" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Tree_Elm_7.obj" id="38_wmkdv"]
+[ext_resource type="ArrayMesh" uid="uid://de84bdw5d4hbw" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Windmill.obj" id="39_l21hh"]
+[ext_resource type="ArrayMesh" uid="uid://bqlnjjevkpgqt" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Windmill_Building_1.obj" id="40_2c8ow"]
+[ext_resource type="ArrayMesh" uid="uid://hge60r4sh1vp" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Decorative_Windmill_Building_2.obj" id="41_succk"]
+[ext_resource type="ArrayMesh" uid="uid://bo52xcygbk054" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Obstacle_Hammer.obj" id="42_0j4qn"]
+[ext_resource type="ArrayMesh" uid="uid://hkk5qd6k3kuh" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Obstacle_Hammer_Housing_Double.obj" id="43_mu7sp"]
+[ext_resource type="ArrayMesh" uid="uid://bd7aur6g5lfy4" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Obstacle_Hammer_Housing_Single.obj" id="44_yohrn"]
+[ext_resource type="ArrayMesh" uid="uid://buaa75lkcwgnl" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Track_Arch_1x4.obj" id="45_rn5nq"]
+[ext_resource type="ArrayMesh" uid="uid://cfl5wd357sdtv" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Track_Banner_Finish_Line_Double_Blank.obj" id="46_qm7w0"]
+[ext_resource type="ArrayMesh" uid="uid://c7xk5tmuvi70m" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Track_Banner_Finish_Line_Double_Checkered.obj" id="47_wmr6r"]
+[ext_resource type="ArrayMesh" uid="uid://ma35sva7dk2q" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Track_Banner_Finish_Line_Single_Blank.obj" id="48_dwrvb"]
+[ext_resource type="ArrayMesh" uid="uid://dok73dj7st160" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Track_Banner_Finish_Line_Single_Checkered.obj" id="49_66hxi"]
+[ext_resource type="ArrayMesh" uid="uid://bdpfvcgxjmrpm" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Track_Bump_Small_Round.obj" id="50_axk5i"]
+[ext_resource type="ArrayMesh" uid="uid://dee3a518o00n3" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Track_Bump_Small_Row.obj" id="51_rl38n"]
+[ext_resource type="ArrayMesh" uid="uid://cvnw6e5am2itg" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Track_Bump_Small_Row_End.obj" id="52_w8rvr"]
+[ext_resource type="ArrayMesh" uid="uid://c2xab8ii8j823" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Track_Ramp.obj" id="53_tpoja"]
+[ext_resource type="ArrayMesh" uid="uid://crv5medkpsxrc" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Track_Ramp_Railing.obj" id="54_3gw1s"]
+[ext_resource type="ArrayMesh" uid="uid://cfw4515s6qq04" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Track_Ramp_Speed_Boost.obj" id="55_lct41"]
+[ext_resource type="ArrayMesh" uid="uid://dr0yf30kvcu30" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Track_Ramp_Support.obj" id="56_eko4x"]
+[ext_resource type="ArrayMesh" uid="uid://ddd2aoq4mkvdy" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Track_Sign_Blank.obj" id="57_ndl1h"]
+[ext_resource type="ArrayMesh" uid="uid://b036vpevk0dys" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Track_Sign_On_Curve.obj" id="58_1jt2y"]
+[ext_resource type="ArrayMesh" uid="uid://efsbkbgu55oh" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Track_Sign_On_Curve_Blank.obj" id="59_4omd0"]
+[ext_resource type="ArrayMesh" uid="uid://cpmdpjopblkdb" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Track_Sign_Upcoming_Curve_90.obj" id="60_dajm8"]
+[ext_resource type="ArrayMesh" uid="uid://dfjpteakmobg3" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Track_Sign_Upcoming_Curve_180.obj" id="61_k2rda"]
+[ext_resource type="ArrayMesh" uid="uid://ccettax3johec" path="res://modular_racekart_track_collection_hilly_terrain/Prop_Track_Sign_Upcoming_Esse.obj" id="62_oaes1"]
+[ext_resource type="ArrayMesh" uid="uid://co5l05obs4x4h" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_1_Tall_Corner_Inner_1x1.obj" id="63_gy7io"]
+[ext_resource type="ArrayMesh" uid="uid://mjycwo7cxlkb" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_1_Tall_Corner_Inner_2x2.obj" id="64_s4ql5"]
+[ext_resource type="ArrayMesh" uid="uid://bgj3eh4dggkbq" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_1_Tall_Corner_Outer_1x1.obj" id="65_6wbfd"]
+[ext_resource type="ArrayMesh" uid="uid://dya5ffw77bqad" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_1_Tall_Side.obj" id="66_xcxar"]
+[ext_resource type="ArrayMesh" uid="uid://fuq2bx378ts2" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_2_Tall_Corner_Inner_1x1.obj" id="67_5lni2"]
+[ext_resource type="ArrayMesh" uid="uid://ddctdhwht5hym" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_2_Tall_Corner_Inner_2x2.obj" id="68_82aqy"]
+[ext_resource type="ArrayMesh" uid="uid://d0urnuj3wmmu8" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_2_Tall_Corner_Outer_1x1.obj" id="69_686ne"]
+[ext_resource type="ArrayMesh" uid="uid://b6rhr016psy2o" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_2_Tall_Side.obj" id="70_5uqq6"]
+[ext_resource type="ArrayMesh" uid="uid://dhiixetynywui" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_3_Tall_Corner_Inner_1x1.obj" id="71_oe2m4"]
+[ext_resource type="ArrayMesh" uid="uid://b0kcgwc2suwys" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_3_Tall_Corner_Inner_2x2.obj" id="72_0qb7x"]
+[ext_resource type="ArrayMesh" uid="uid://bntnx2mlfpqp3" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_3_Tall_Corner_Outer_1x1.obj" id="73_avqcy"]
+[ext_resource type="ArrayMesh" uid="uid://hwpc2r2wknq5" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_3_Tall_Side.obj" id="74_rw4n2"]
+[ext_resource type="ArrayMesh" uid="uid://k30eefyalt7t" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_Bottom_Corner_Inner_1x1.obj" id="75_wkwxf"]
+[ext_resource type="ArrayMesh" uid="uid://cqm6mwa2qpsmb" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_Bottom_Corner_Inner_2x2.obj" id="76_v0bdk"]
+[ext_resource type="ArrayMesh" uid="uid://cjc6d8073f73p" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_Bottom_Corner_Outer_1x1.obj" id="77_mjpp1"]
+[ext_resource type="ArrayMesh" uid="uid://bsou8vgb0nces" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_Bottom_Side.obj" id="78_jtomr"]
+[ext_resource type="ArrayMesh" uid="uid://cjcbxuemalq6k" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_Middle_Corner_Inner_1x1.obj" id="79_yudgm"]
+[ext_resource type="ArrayMesh" uid="uid://mouiel0oiofi" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_Middle_Corner_Inner_2x2.obj" id="80_jj26t"]
+[ext_resource type="ArrayMesh" uid="uid://dkotc2mvu06uj" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_Middle_Corner_Outer_1x1.obj" id="81_ga0lw"]
+[ext_resource type="ArrayMesh" uid="uid://b4g2jx6bionq" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_Middle_Side.obj" id="82_tnxrb"]
+[ext_resource type="ArrayMesh" uid="uid://n20vok6cp0g5" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_Top_Corner_Inner_1x1.obj" id="83_d15nh"]
+[ext_resource type="ArrayMesh" uid="uid://rqfiioh5qu6w" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_Top_Corner_Inner_2x2.obj" id="84_rwvf2"]
+[ext_resource type="ArrayMesh" uid="uid://cyyds7y371hej" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_Top_Corner_Outer_1x1.obj" id="85_aginx"]
+[ext_resource type="ArrayMesh" uid="uid://bl37tp7r6eivi" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Cliff_Top_Side.obj" id="86_2r8dj"]
+[ext_resource type="ArrayMesh" uid="uid://n8lh6m3eqxv" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Grass_Flat_1x1.obj" id="87_a3ycl"]
+[ext_resource type="ArrayMesh" uid="uid://6gb57r2uw6mo" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Hill_Corner_Inner_3x3.obj" id="88_e3nhe"]
+[ext_resource type="ArrayMesh" uid="uid://ct8x4jgfutk74" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Hill_Corner_Inner_4x4.obj" id="89_oveu8"]
+[ext_resource type="ArrayMesh" uid="uid://c236nxsw3scst" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Hill_Corner_Inner_5x5.obj" id="90_b4bos"]
+[ext_resource type="ArrayMesh" uid="uid://djtlorb57ghv1" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Hill_Corner_Outer_3x3.obj" id="91_yigok"]
+[ext_resource type="ArrayMesh" uid="uid://5wv121056tku" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Hill_Corner_Outer_4x4.obj" id="92_o6kyj"]
+[ext_resource type="ArrayMesh" uid="uid://bv73jgjk1eqdb" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Hill_Corner_Outer_5x5.obj" id="93_awg5a"]
+[ext_resource type="ArrayMesh" uid="uid://dvng41b67kfed" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Hill_Esse_3x4.obj" id="94_fa30u"]
+[ext_resource type="ArrayMesh" uid="uid://dvp3bkj136c0h" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Hill_Esse_4x5.obj" id="95_33rdh"]
+[ext_resource type="ArrayMesh" uid="uid://7jdqyf7j8eti" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Hill_Side_1x3.obj" id="96_55qsd"]
+[ext_resource type="ArrayMesh" uid="uid://dreixhqhlsmq4" path="res://modular_racekart_track_collection_hilly_terrain/Terrain_Water_Flat_Circle.obj" id="97_7fqh0"]
+[ext_resource type="ArrayMesh" uid="uid://dk3jucsjjnhtk" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Curve_3x3.obj" id="98_kewme"]
+[ext_resource type="ArrayMesh" uid="uid://cqx6p63muvfo6" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Curve_3x3_Collider.obj" id="99_xlu4y"]
+[ext_resource type="ArrayMesh" uid="uid://bykxlalc0wins" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Curve_3x3_Piers.obj" id="100_lqt0w"]
+[ext_resource type="ArrayMesh" uid="uid://blu8s2w5cl4t1" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Flat_Collider.obj" id="101_a2prt"]
+[ext_resource type="ArrayMesh" uid="uid://31pkwi3gbxtm" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Flat_Floating.obj" id="102_kpio6"]
+[ext_resource type="ArrayMesh" uid="uid://q0i7ptk36rcc" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Flat_Supported.obj" id="103_0m2sj"]
+[ext_resource type="ArrayMesh" uid="uid://ctips3btis5ak" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Flat_Gentle_Collider.obj" id="104_1ykko"]
+[ext_resource type="ArrayMesh" uid="uid://b8lvd0as3yyld" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Flat_Gentle_Floating.obj" id="105_bsgks"]
+[ext_resource type="ArrayMesh" uid="uid://dtiq46ekmynhv" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Flat_Gentle_Supported.obj" id="106_er4sd"]
+[ext_resource type="ArrayMesh" uid="uid://x6raiv1spwu0" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Flat_Sharp_Collider.obj" id="107_s6cp5"]
+[ext_resource type="ArrayMesh" uid="uid://c5x4qo72shafr" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Flat_Sharp_Floating.obj" id="108_uma0w"]
+[ext_resource type="ArrayMesh" uid="uid://4xvgjei42nqi" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Flat_Sharp_Supported.obj" id="109_byd04"]
+[ext_resource type="ArrayMesh" uid="uid://b5pixnbys8crk" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Gentle_Collider.obj" id="110_r1hq2"]
+[ext_resource type="ArrayMesh" uid="uid://bnahh0oqjyq2c" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Gentle_Flat_Collider.obj" id="111_sitm8"]
+[ext_resource type="ArrayMesh" uid="uid://c6qtkh2xpvmlp" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Gentle_Flat_Floating.obj" id="112_yuxgd"]
+[ext_resource type="ArrayMesh" uid="uid://boxbr2yyehre0" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Gentle_Flat_Supported.obj" id="113_xf0sv"]
+[ext_resource type="ArrayMesh" uid="uid://m0r6ki3ovjxj" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Gentle_Floating.obj" id="114_s7i5w"]
+[ext_resource type="ArrayMesh" uid="uid://bh6i5a6d2aijt" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Gentle_Sharp_Collider.obj" id="115_24cc8"]
+[ext_resource type="ArrayMesh" uid="uid://cwvd2ily0upco" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Gentle_Sharp_Floating.obj" id="116_s881o"]
+[ext_resource type="ArrayMesh" uid="uid://cl1oset831w8b" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Gentle_Sharp_Supported.obj" id="117_b3dvt"]
+[ext_resource type="ArrayMesh" uid="uid://8hjsuv6ikhl1" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Gentle_Supported.obj" id="118_uix74"]
+[ext_resource type="ArrayMesh" uid="uid://bkeub50xcnrtd" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Sharp_Collider.obj" id="119_8u6ro"]
+[ext_resource type="ArrayMesh" uid="uid://g76drs581uhw" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Sharp_Flat_Collider.obj" id="120_u1ms6"]
+[ext_resource type="ArrayMesh" uid="uid://c3ybwenmloy5q" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Sharp_Flat_Floating.obj" id="121_jnmav"]
+[ext_resource type="ArrayMesh" uid="uid://bpb33gsvwsuip" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Sharp_Flat_Supported.obj" id="122_teumg"]
+[ext_resource type="ArrayMesh" uid="uid://ckl4yjlfur6hk" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Sharp_Floating.obj" id="123_a67ca"]
+[ext_resource type="ArrayMesh" uid="uid://vqql82dd8tqq" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Sharp_Gentle_Collider.obj" id="124_2qkip"]
+[ext_resource type="ArrayMesh" uid="uid://wx8f7e72meg1" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Sharp_Gentle_Floating.obj" id="125_a52wu"]
+[ext_resource type="ArrayMesh" uid="uid://cctc14u32seb8" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Sharp_Gentle_Supported.obj" id="126_xl36c"]
+[ext_resource type="ArrayMesh" uid="uid://dcxx5ohhvxgw2" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Incline_Sharp_Supported.obj" id="127_xu87o"]
+[ext_resource type="ArrayMesh" uid="uid://b4hmmim4pj003" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Piers.obj" id="128_vubau"]
+[ext_resource type="ArrayMesh" uid="uid://djhe1hbco565b" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Start.obj" id="129_jbdrp"]
+[ext_resource type="ArrayMesh" uid="uid://da8f1jbo8qxu4" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Start_Collider.obj" id="130_mp3o1"]
+[ext_resource type="ArrayMesh" uid="uid://xfxbsxfjnkpx" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Start_Flat_to_Gentle.obj" id="131_2g75n"]
+[ext_resource type="ArrayMesh" uid="uid://lgumo7b0njtt" path="res://modular_racekart_track_collection_hilly_terrain/Track_Bridge_Start_Flat_to_Sharp.obj" id="132_sq50y"]
+[ext_resource type="ArrayMesh" uid="uid://c8ymwtb50k258" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Curve_Standard_Double_5x5.obj" id="133_0fapr"]
+[ext_resource type="ArrayMesh" uid="uid://dgib2s5436opw" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Curve_Standard_Double_6x6.obj" id="134_4qw8r"]
+[ext_resource type="ArrayMesh" uid="uid://bm8gpvefgo3ns" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Curve_Standard_Single_4x4.obj" id="135_qhlqj"]
+[ext_resource type="ArrayMesh" uid="uid://colk2ochtcjca" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Curve_Standard_Single_5x5.obj" id="136_nq5pe"]
+[ext_resource type="ArrayMesh" uid="uid://clejlfqi7bo6q" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Curve_Standard_Single_6x6.obj" id="137_oa3d2"]
+[ext_resource type="ArrayMesh" uid="uid://bc1oiq4vscxou" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Curve_Striped_Double_5x5.obj" id="138_2p8vo"]
+[ext_resource type="ArrayMesh" uid="uid://cvx448vs7slnt" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Curve_Striped_Double_6x6.obj" id="139_8f5mt"]
+[ext_resource type="ArrayMesh" uid="uid://bngi850wtvmgc" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Curve_Striped_Single_4x4.obj" id="140_v7op8"]
+[ext_resource type="ArrayMesh" uid="uid://dceakskd6re0e" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Curve_Striped_Single_5x5.obj" id="141_ssw3p"]
+[ext_resource type="ArrayMesh" uid="uid://ci0jkbxhmxihm" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Curve_Striped_Single_6x6.obj" id="142_04r5m"]
+[ext_resource type="ArrayMesh" uid="uid://0n1drmuee8bk" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Edge_Standard_1_Tall_Double.obj" id="143_kimuv"]
+[ext_resource type="ArrayMesh" uid="uid://cyugxdpm07k4m" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Edge_Standard_1_Tall_Single.obj" id="144_p0qdn"]
+[ext_resource type="ArrayMesh" uid="uid://d30stx4cecwri" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Edge_Standard_2_Tall_Double.obj" id="145_4yed6"]
+[ext_resource type="ArrayMesh" uid="uid://de8d48fv7tbgo" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Edge_Standard_2_Tall_Single.obj" id="146_dkmx3"]
+[ext_resource type="ArrayMesh" uid="uid://bn4hdwelclrtn" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Edge_Standard_3_Tall_Double.obj" id="147_fhowf"]
+[ext_resource type="ArrayMesh" uid="uid://d25h7kb4tjq0k" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Edge_Standard_3_Tall_Single.obj" id="148_uxcfa"]
+[ext_resource type="ArrayMesh" uid="uid://cnahmbm8vkvge" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Edge_Striped_1_Tall_Double.obj" id="149_brkxc"]
+[ext_resource type="ArrayMesh" uid="uid://jig1li02025u" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Edge_Striped_1_Tall_Single.obj" id="150_dmtlh"]
+[ext_resource type="ArrayMesh" uid="uid://xuuukvr6j8o" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Edge_Striped_2_Tall_Double.obj" id="151_1bxul"]
+[ext_resource type="ArrayMesh" uid="uid://qj5cfj3u3cna" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Edge_Striped_2_Tall_Single.obj" id="152_8137r"]
+[ext_resource type="ArrayMesh" uid="uid://c1b3ikau8j0vm" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Edge_Striped_3_Tall_Double.obj" id="153_86acs"]
+[ext_resource type="ArrayMesh" uid="uid://cl7gdtaexchpr" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Edge_Striped_3_Tall_Single.obj" id="154_tvdiq"]
+[ext_resource type="ArrayMesh" uid="uid://dv74tooidlopa" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Incline_Standard_1_Tall_Double.obj" id="155_sdb4u"]
+[ext_resource type="ArrayMesh" uid="uid://bv8at52gy2j1v" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Incline_Standard_1_Tall_Single.obj" id="156_jfpdj"]
+[ext_resource type="ArrayMesh" uid="uid://3mxb16f3y6u3" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Incline_Standard_2_Tall_Double.obj" id="157_v762j"]
+[ext_resource type="ArrayMesh" uid="uid://c0u5kqtbqsklv" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Incline_Standard_2_Tall_Single.obj" id="158_xesy5"]
+[ext_resource type="ArrayMesh" uid="uid://cmx7g1sdtdjlj" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Incline_Standard_3_Tall_Double.obj" id="159_4v32w"]
+[ext_resource type="ArrayMesh" uid="uid://bs6xiydg32bku" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Incline_Standard_3_Tall_Single.obj" id="160_qb2gw"]
+[ext_resource type="ArrayMesh" uid="uid://b2pnk2x2i3uh1" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Incline_Striped_1_Tall_Double.obj" id="161_f4ivx"]
+[ext_resource type="ArrayMesh" uid="uid://37afuu6g5ehn" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Incline_Striped_1_Tall_Single.obj" id="162_bt6ph"]
+[ext_resource type="ArrayMesh" uid="uid://cpk5v7it444xv" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Incline_Striped_2_Tall_Double.obj" id="163_xnu7b"]
+[ext_resource type="ArrayMesh" uid="uid://du48cvwprlr3r" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Incline_Striped_2_Tall_Single.obj" id="164_a51sc"]
+[ext_resource type="ArrayMesh" uid="uid://e0xsldnrxfgr" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Incline_Striped_3_Tall_Double.obj" id="165_f201b"]
+[ext_resource type="ArrayMesh" uid="uid://bf7ujrr2is8rr" path="res://modular_racekart_track_collection_hilly_terrain/Track_Cliff_Incline_Striped_3_Tall_Single.obj" id="166_pd6lc"]
+[ext_resource type="ArrayMesh" uid="uid://cevv2mwastoak" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Curve_Double_4x4.obj" id="167_vo17w"]
+[ext_resource type="ArrayMesh" uid="uid://bg418c5m2qj0h" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Curve_Double_5x5.obj" id="168_qyky4"]
+[ext_resource type="ArrayMesh" uid="uid://bguqbeywim636" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Curve_Single_3x3.obj" id="169_1a81i"]
+[ext_resource type="ArrayMesh" uid="uid://c7m1hn4crgryv" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Curve_Single_4x4.obj" id="170_kse81"]
+[ext_resource type="ArrayMesh" uid="uid://df6mo24d4amst" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Curve_Single_5x5.obj" id="171_mo052"]
+[ext_resource type="ArrayMesh" uid="uid://cj306pj12ex27" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Curve_Widening_3x4.obj" id="172_bsfyn"]
+[ext_resource type="ArrayMesh" uid="uid://c70dm1fqufa1m" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Curve_Widening_4x5.obj" id="173_4j5me"]
+[ext_resource type="ArrayMesh" uid="uid://lid6bhi5oqn4" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Curve_Widening_5x6.obj" id="174_2jy04"]
+[ext_resource type="ArrayMesh" uid="uid://ddo5eepu8hohq" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Esse_Double.obj" id="175_mo81i"]
+[ext_resource type="ArrayMesh" uid="uid://cy0udnaj4gk85" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Esse_Single.obj" id="176_usr5h"]
+[ext_resource type="ArrayMesh" uid="uid://dqylabue0qjuk" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Finish_Line_Double_Blank.obj" id="177_y4gvh"]
+[ext_resource type="ArrayMesh" uid="uid://8sugslp7rcv8" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Finish_Line_Double_Checkered.obj" id="178_w7ctk"]
+[ext_resource type="ArrayMesh" uid="uid://cexyscjwnxha4" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Finish_Line_Single_Blank.obj" id="179_inkca"]
+[ext_resource type="ArrayMesh" uid="uid://0w0y7hsfqvvk" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Finish_Line_Single_Checkered.obj" id="180_4x7l1"]
+[ext_resource type="ArrayMesh" uid="uid://bqqwjvgryth82" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Incline_Double.obj" id="181_r1s4r"]
+[ext_resource type="ArrayMesh" uid="uid://dc2rp4p5e04eh" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Incline_Single.obj" id="182_g5lqn"]
+[ext_resource type="ArrayMesh" uid="uid://b6k1t0vy6rdap" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Straight_Double.obj" id="183_ykvur"]
+[ext_resource type="ArrayMesh" uid="uid://co5tvvnnblg1o" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Straight_Single.obj" id="184_0iuqb"]
+[ext_resource type="ArrayMesh" uid="uid://dwm24nrqkpm5u" path="res://modular_racekart_track_collection_hilly_terrain/Track_Standard_Straight_Widening.obj" id="185_bs44c"]
+[ext_resource type="ArrayMesh" uid="uid://er45i421amt7" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Curve_Double_4x4.obj" id="186_7v8mg"]
+[ext_resource type="ArrayMesh" uid="uid://d6vvi4dpdvka" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Curve_Double_5x5.obj" id="187_8ga2h"]
+[ext_resource type="ArrayMesh" uid="uid://bj2kjxtk5q2td" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Curve_Single_3x3.obj" id="188_i04ep"]
+[ext_resource type="ArrayMesh" uid="uid://xr5l64ew0f5u" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Curve_Single_4x4.obj" id="189_5ohhf"]
+[ext_resource type="ArrayMesh" uid="uid://c18810m6s7udq" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Curve_Single_5x5.obj" id="190_j1nol"]
+[ext_resource type="ArrayMesh" uid="uid://dv7s3l3eynlaj" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Curve_Widening_3x4.obj" id="191_op8qb"]
+[ext_resource type="ArrayMesh" uid="uid://tsu2x4wc2fug" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Curve_Widening_4x5.obj" id="192_gblut"]
+[ext_resource type="ArrayMesh" uid="uid://bn4q2hb8hobpv" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Curve_Widening_5x6.obj" id="193_6jd8l"]
+[ext_resource type="ArrayMesh" uid="uid://0bl2myf2suhi" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_End_Straight_Double.obj" id="194_xyy1x"]
+[ext_resource type="ArrayMesh" uid="uid://bsr634qmpx5mh" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_End_Straight_Single.obj" id="195_ldert"]
+[ext_resource type="ArrayMesh" uid="uid://oaa5qyusyhch" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Esse_Double.obj" id="196_5bfgd"]
+[ext_resource type="ArrayMesh" uid="uid://8b4kfekmjt7h" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Esse_Single.obj" id="197_0fwyj"]
+[ext_resource type="ArrayMesh" uid="uid://dv0y0jdwnm2e" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Finish_Line_Double_Blank.obj" id="198_001q0"]
+[ext_resource type="ArrayMesh" uid="uid://bl2xwbfsuhtg1" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Finish_Line_Double_Checkered.obj" id="199_t8rdn"]
+[ext_resource type="ArrayMesh" uid="uid://8i5o7ufh0735" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Finish_Line_Single_Blank.obj" id="200_7vej7"]
+[ext_resource type="ArrayMesh" uid="uid://d3qmex6070ij7" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Finish_Line_Single_Checkered.obj" id="201_kdv28"]
+[ext_resource type="ArrayMesh" uid="uid://shjl0h2nog02" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Incline_Double.obj" id="202_3kha0"]
+[ext_resource type="ArrayMesh" uid="uid://bc0rj6yo0bvc3" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Incline_Single.obj" id="203_tthfb"]
+[ext_resource type="ArrayMesh" uid="uid://cfvka3oneisl8" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Straight_Double.obj" id="204_qtxxy"]
+[ext_resource type="ArrayMesh" uid="uid://6ojgm3a2pjml" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Straight_Single.obj" id="205_wb2pj"]
+[ext_resource type="ArrayMesh" uid="uid://dx21encwv3457" path="res://modular_racekart_track_collection_hilly_terrain/Track_Striped_Straight_Widening.obj" id="206_3x6u1"]
+
+[node name="rc_tiles_1" type="Node3D"]
+
+[node name="PropDecorativeFenceCurve1x1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_sfngo")
+
+[node name="PropDecorativeFenceCurve2x2" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_y14jk")
+
+[node name="PropDecorativeFenceCurve3x3" type="MeshInstance3D" parent="."]
+mesh = ExtResource("3_ajtgo")
+
+[node name="PropDecorativeFenceCurve3x4" type="MeshInstance3D" parent="."]
+mesh = ExtResource("4_jdgdj")
+
+[node name="PropDecorativeFenceCurve4x4" type="MeshInstance3D" parent="."]
+mesh = ExtResource("5_87j3j")
+
+[node name="PropDecorativeFenceCurve4x5" type="MeshInstance3D" parent="."]
+mesh = ExtResource("6_6ttno")
+
+[node name="PropDecorativeFenceCurve5x5" type="MeshInstance3D" parent="."]
+mesh = ExtResource("7_tnvun")
+
+[node name="PropDecorativeFenceCurve5x6" type="MeshInstance3D" parent="."]
+mesh = ExtResource("8_3esuw")
+
+[node name="PropDecorativeFenceEsse2x3" type="MeshInstance3D" parent="."]
+mesh = ExtResource("9_b4ink")
+
+[node name="PropDecorativeFenceGate1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("10_sjfxg")
+
+[node name="PropDecorativeFenceGate2" type="MeshInstance3D" parent="."]
+mesh = ExtResource("11_inglo")
+
+[node name="PropDecorativeFenceHill" type="MeshInstance3D" parent="."]
+mesh = ExtResource("12_lcun7")
+
+[node name="PropDecorativeFencePost" type="MeshInstance3D" parent="."]
+mesh = ExtResource("13_7qkiv")
+
+[node name="PropDecorativeFenceRailing" type="MeshInstance3D" parent="."]
+mesh = ExtResource("14_samvl")
+
+[node name="PropDecorativeHayBaleBarrel" type="MeshInstance3D" parent="."]
+mesh = ExtResource("15_qf346")
+
+[node name="PropDecorativeHayBaleBox" type="MeshInstance3D" parent="."]
+mesh = ExtResource("16_joc1t")
+
+[node name="PropDecorativeHayPile" type="MeshInstance3D" parent="."]
+mesh = ExtResource("17_bqmma")
+
+[node name="PropDecorativeHayPilePitchfork" type="MeshInstance3D" parent="."]
+mesh = ExtResource("18_qnw7s")
+
+[node name="PropDecorativeHayPitchfork" type="MeshInstance3D" parent="."]
+mesh = ExtResource("19_58pfx")
+
+[node name="PropDecorativeLighthouse" type="MeshInstance3D" parent="."]
+mesh = ExtResource("20_wfmcb")
+
+[node name="PropDecorativeRock1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("21_lpir6")
+
+[node name="PropDecorativeRock2" type="MeshInstance3D" parent="."]
+mesh = ExtResource("22_a6shn")
+
+[node name="PropDecorativeRock3" type="MeshInstance3D" parent="."]
+mesh = ExtResource("23_sq2ci")
+
+[node name="PropDecorativeRock4" type="MeshInstance3D" parent="."]
+mesh = ExtResource("24_em6i2")
+
+[node name="PropDecorativeRock5" type="MeshInstance3D" parent="."]
+mesh = ExtResource("25_pcain")
+
+[node name="PropDecorativeRock6" type="MeshInstance3D" parent="."]
+mesh = ExtResource("26_71l1u")
+
+[node name="PropDecorativeRock7" type="MeshInstance3D" parent="."]
+mesh = ExtResource("27_42xrf")
+
+[node name="PropDecorativeRock8" type="MeshInstance3D" parent="."]
+mesh = ExtResource("28_ncxoj")
+
+[node name="PropDecorativeTreeCedar1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("29_0njrv")
+
+[node name="PropDecorativeTreeCedar2" type="MeshInstance3D" parent="."]
+mesh = ExtResource("30_kf8vn")
+
+[node name="PropDecorativeTreeCedar3" type="MeshInstance3D" parent="."]
+mesh = ExtResource("31_behcb")
+
+[node name="PropDecorativeTreeElm1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("32_u50gk")
+
+[node name="PropDecorativeTreeElm2" type="MeshInstance3D" parent="."]
+mesh = ExtResource("33_ki2tu")
+
+[node name="PropDecorativeTreeElm3" type="MeshInstance3D" parent="."]
+mesh = ExtResource("34_wowgu")
+
+[node name="PropDecorativeTreeElm4" type="MeshInstance3D" parent="."]
+mesh = ExtResource("35_hnj62")
+
+[node name="PropDecorativeTreeElm5" type="MeshInstance3D" parent="."]
+mesh = ExtResource("36_xpne5")
+
+[node name="PropDecorativeTreeElm6" type="MeshInstance3D" parent="."]
+mesh = ExtResource("37_fs4mj")
+
+[node name="PropDecorativeTreeElm7" type="MeshInstance3D" parent="."]
+mesh = ExtResource("38_wmkdv")
+
+[node name="PropDecorativeWindmill" type="MeshInstance3D" parent="."]
+mesh = ExtResource("39_l21hh")
+
+[node name="PropDecorativeWindmillBuilding1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("40_2c8ow")
+
+[node name="PropDecorativeWindmillBuilding2" type="MeshInstance3D" parent="."]
+mesh = ExtResource("41_succk")
+
+[node name="PropObstacleHammer" type="MeshInstance3D" parent="."]
+mesh = ExtResource("42_0j4qn")
+
+[node name="PropObstacleHammerHousingDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("43_mu7sp")
+
+[node name="PropObstacleHammerHousingSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("44_yohrn")
+
+[node name="PropTrackArch1x4" type="MeshInstance3D" parent="."]
+mesh = ExtResource("45_rn5nq")
+
+[node name="PropTrackBannerFinishLineDoubleBlank" type="MeshInstance3D" parent="."]
+mesh = ExtResource("46_qm7w0")
+
+[node name="PropTrackBannerFinishLineDoubleCheckered" type="MeshInstance3D" parent="."]
+mesh = ExtResource("47_wmr6r")
+
+[node name="PropTrackBannerFinishLineSingleBlank" type="MeshInstance3D" parent="."]
+mesh = ExtResource("48_dwrvb")
+
+[node name="PropTrackBannerFinishLineSingleCheckered" type="MeshInstance3D" parent="."]
+mesh = ExtResource("49_66hxi")
+
+[node name="PropTrackBumpSmallRound" type="MeshInstance3D" parent="."]
+mesh = ExtResource("50_axk5i")
+
+[node name="PropTrackBumpSmallRow" type="MeshInstance3D" parent="."]
+mesh = ExtResource("51_rl38n")
+
+[node name="PropTrackBumpSmallRowEnd" type="MeshInstance3D" parent="."]
+mesh = ExtResource("52_w8rvr")
+
+[node name="PropTrackRamp" type="MeshInstance3D" parent="."]
+mesh = ExtResource("53_tpoja")
+
+[node name="PropTrackRampRailing" type="MeshInstance3D" parent="."]
+mesh = ExtResource("54_3gw1s")
+
+[node name="PropTrackRampSpeedBoost" type="MeshInstance3D" parent="."]
+mesh = ExtResource("55_lct41")
+
+[node name="PropTrackRampSupport" type="MeshInstance3D" parent="."]
+mesh = ExtResource("56_eko4x")
+
+[node name="PropTrackSignBlank" type="MeshInstance3D" parent="."]
+mesh = ExtResource("57_ndl1h")
+
+[node name="PropTrackSignOnCurve" type="MeshInstance3D" parent="."]
+mesh = ExtResource("58_1jt2y")
+
+[node name="PropTrackSignOnCurveBlank" type="MeshInstance3D" parent="."]
+mesh = ExtResource("59_4omd0")
+
+[node name="PropTrackSignUpcomingCurve90" type="MeshInstance3D" parent="."]
+mesh = ExtResource("60_dajm8")
+
+[node name="PropTrackSignUpcomingCurve180" type="MeshInstance3D" parent="."]
+mesh = ExtResource("61_k2rda")
+
+[node name="PropTrackSignUpcomingEsse" type="MeshInstance3D" parent="."]
+mesh = ExtResource("62_oaes1")
+
+[node name="TerrainCliff1TallCornerInner1x1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("63_gy7io")
+
+[node name="TerrainCliff1TallCornerInner2x2" type="MeshInstance3D" parent="."]
+mesh = ExtResource("64_s4ql5")
+
+[node name="TerrainCliff1TallCornerOuter1x1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("65_6wbfd")
+
+[node name="TerrainCliff1TallSide" type="MeshInstance3D" parent="."]
+mesh = ExtResource("66_xcxar")
+
+[node name="TerrainCliff2TallCornerInner1x1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("67_5lni2")
+
+[node name="TerrainCliff2TallCornerInner2x2" type="MeshInstance3D" parent="."]
+mesh = ExtResource("68_82aqy")
+
+[node name="TerrainCliff2TallCornerOuter1x1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("69_686ne")
+
+[node name="TerrainCliff2TallSide" type="MeshInstance3D" parent="."]
+mesh = ExtResource("70_5uqq6")
+
+[node name="TerrainCliff3TallCornerInner1x1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("71_oe2m4")
+
+[node name="TerrainCliff3TallCornerInner2x2" type="MeshInstance3D" parent="."]
+mesh = ExtResource("72_0qb7x")
+
+[node name="TerrainCliff3TallCornerOuter1x1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("73_avqcy")
+
+[node name="TerrainCliff3TallSide" type="MeshInstance3D" parent="."]
+mesh = ExtResource("74_rw4n2")
+
+[node name="TerrainCliffBottomCornerInner1x1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("75_wkwxf")
+
+[node name="TerrainCliffBottomCornerInner2x2" type="MeshInstance3D" parent="."]
+mesh = ExtResource("76_v0bdk")
+
+[node name="TerrainCliffBottomCornerOuter1x1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("77_mjpp1")
+
+[node name="TerrainCliffBottomSide" type="MeshInstance3D" parent="."]
+mesh = ExtResource("78_jtomr")
+
+[node name="TerrainCliffMiddleCornerInner1x1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("79_yudgm")
+
+[node name="TerrainCliffMiddleCornerInner2x2" type="MeshInstance3D" parent="."]
+mesh = ExtResource("80_jj26t")
+
+[node name="TerrainCliffMiddleCornerOuter1x1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("81_ga0lw")
+
+[node name="TerrainCliffMiddleSide" type="MeshInstance3D" parent="."]
+mesh = ExtResource("82_tnxrb")
+
+[node name="TerrainCliffTopCornerInner1x1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("83_d15nh")
+
+[node name="TerrainCliffTopCornerInner2x2" type="MeshInstance3D" parent="."]
+mesh = ExtResource("84_rwvf2")
+
+[node name="TerrainCliffTopCornerOuter1x1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("85_aginx")
+
+[node name="TerrainCliffTopSide" type="MeshInstance3D" parent="."]
+mesh = ExtResource("86_2r8dj")
+
+[node name="TerrainGrassFlat1x1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("87_a3ycl")
+
+[node name="TerrainHillCornerInner3x3" type="MeshInstance3D" parent="."]
+mesh = ExtResource("88_e3nhe")
+
+[node name="TerrainHillCornerInner4x4" type="MeshInstance3D" parent="."]
+mesh = ExtResource("89_oveu8")
+
+[node name="TerrainHillCornerInner5x5" type="MeshInstance3D" parent="."]
+mesh = ExtResource("90_b4bos")
+
+[node name="TerrainHillCornerOuter3x3" type="MeshInstance3D" parent="."]
+mesh = ExtResource("91_yigok")
+
+[node name="TerrainHillCornerOuter4x4" type="MeshInstance3D" parent="."]
+mesh = ExtResource("92_o6kyj")
+
+[node name="TerrainHillCornerOuter5x5" type="MeshInstance3D" parent="."]
+mesh = ExtResource("93_awg5a")
+
+[node name="TerrainHillEsse3x4" type="MeshInstance3D" parent="."]
+mesh = ExtResource("94_fa30u")
+
+[node name="TerrainHillEsse4x5" type="MeshInstance3D" parent="."]
+mesh = ExtResource("95_33rdh")
+
+[node name="TerrainHillSide1x3" type="MeshInstance3D" parent="."]
+mesh = ExtResource("96_55qsd")
+
+[node name="TerrainWaterFlatCircle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("97_7fqh0")
+
+[node name="TrackBridgeCurve3x3" type="MeshInstance3D" parent="."]
+mesh = ExtResource("98_kewme")
+
+[node name="TrackBridgeCurve3x3Collider" type="MeshInstance3D" parent="."]
+mesh = ExtResource("99_xlu4y")
+
+[node name="TrackBridgeCurve3x3Piers" type="MeshInstance3D" parent="."]
+mesh = ExtResource("100_lqt0w")
+
+[node name="TrackBridgeFlatCollider" type="MeshInstance3D" parent="."]
+mesh = ExtResource("101_a2prt")
+
+[node name="TrackBridgeFlatFloating" type="MeshInstance3D" parent="."]
+mesh = ExtResource("102_kpio6")
+
+[node name="TrackBridgeFlatSupported" type="MeshInstance3D" parent="."]
+mesh = ExtResource("103_0m2sj")
+
+[node name="TrackBridgeInclineFlatGentleCollider" type="MeshInstance3D" parent="."]
+mesh = ExtResource("104_1ykko")
+
+[node name="TrackBridgeInclineFlatGentleFloating" type="MeshInstance3D" parent="."]
+mesh = ExtResource("105_bsgks")
+
+[node name="TrackBridgeInclineFlatGentleSupported" type="MeshInstance3D" parent="."]
+mesh = ExtResource("106_er4sd")
+
+[node name="TrackBridgeInclineFlatSharpCollider" type="MeshInstance3D" parent="."]
+mesh = ExtResource("107_s6cp5")
+
+[node name="TrackBridgeInclineFlatSharpFloating" type="MeshInstance3D" parent="."]
+mesh = ExtResource("108_uma0w")
+
+[node name="TrackBridgeInclineFlatSharpSupported" type="MeshInstance3D" parent="."]
+mesh = ExtResource("109_byd04")
+
+[node name="TrackBridgeInclineGentleCollider" type="MeshInstance3D" parent="."]
+mesh = ExtResource("110_r1hq2")
+
+[node name="TrackBridgeInclineGentleFlatCollider" type="MeshInstance3D" parent="."]
+mesh = ExtResource("111_sitm8")
+
+[node name="TrackBridgeInclineGentleFlatFloating" type="MeshInstance3D" parent="."]
+mesh = ExtResource("112_yuxgd")
+
+[node name="TrackBridgeInclineGentleFlatSupported" type="MeshInstance3D" parent="."]
+mesh = ExtResource("113_xf0sv")
+
+[node name="TrackBridgeInclineGentleFloating" type="MeshInstance3D" parent="."]
+mesh = ExtResource("114_s7i5w")
+
+[node name="TrackBridgeInclineGentleSharpCollider" type="MeshInstance3D" parent="."]
+mesh = ExtResource("115_24cc8")
+
+[node name="TrackBridgeInclineGentleSharpFloating" type="MeshInstance3D" parent="."]
+mesh = ExtResource("116_s881o")
+
+[node name="TrackBridgeInclineGentleSharpSupported" type="MeshInstance3D" parent="."]
+mesh = ExtResource("117_b3dvt")
+
+[node name="TrackBridgeInclineGentleSupported" type="MeshInstance3D" parent="."]
+mesh = ExtResource("118_uix74")
+
+[node name="TrackBridgeInclineSharpCollider" type="MeshInstance3D" parent="."]
+mesh = ExtResource("119_8u6ro")
+
+[node name="TrackBridgeInclineSharpFlatCollider" type="MeshInstance3D" parent="."]
+mesh = ExtResource("120_u1ms6")
+
+[node name="TrackBridgeInclineSharpFlatFloating" type="MeshInstance3D" parent="."]
+mesh = ExtResource("121_jnmav")
+
+[node name="TrackBridgeInclineSharpFlatSupported" type="MeshInstance3D" parent="."]
+mesh = ExtResource("122_teumg")
+
+[node name="TrackBridgeInclineSharpFloating" type="MeshInstance3D" parent="."]
+mesh = ExtResource("123_a67ca")
+
+[node name="TrackBridgeInclineSharpGentleCollider" type="MeshInstance3D" parent="."]
+mesh = ExtResource("124_2qkip")
+
+[node name="TrackBridgeInclineSharpGentleFloating" type="MeshInstance3D" parent="."]
+mesh = ExtResource("125_a52wu")
+
+[node name="TrackBridgeInclineSharpGentleSupported" type="MeshInstance3D" parent="."]
+mesh = ExtResource("126_xl36c")
+
+[node name="TrackBridgeInclineSharpSupported" type="MeshInstance3D" parent="."]
+mesh = ExtResource("127_xu87o")
+
+[node name="TrackBridgePiers" type="MeshInstance3D" parent="."]
+mesh = ExtResource("128_vubau")
+
+[node name="TrackBridgeStart" type="MeshInstance3D" parent="."]
+mesh = ExtResource("129_jbdrp")
+
+[node name="TrackBridgeStartCollider" type="MeshInstance3D" parent="."]
+mesh = ExtResource("130_mp3o1")
+
+[node name="TrackBridgeStartFlatToGentle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("131_2g75n")
+
+[node name="TrackBridgeStartFlatToSharp" type="MeshInstance3D" parent="."]
+mesh = ExtResource("132_sq50y")
+
+[node name="TrackCliffCurveStandardDouble5x5" type="MeshInstance3D" parent="."]
+mesh = ExtResource("133_0fapr")
+
+[node name="TrackCliffCurveStandardDouble6x6" type="MeshInstance3D" parent="."]
+mesh = ExtResource("134_4qw8r")
+
+[node name="TrackCliffCurveStandardSingle4x4" type="MeshInstance3D" parent="."]
+mesh = ExtResource("135_qhlqj")
+
+[node name="TrackCliffCurveStandardSingle5x5" type="MeshInstance3D" parent="."]
+mesh = ExtResource("136_nq5pe")
+
+[node name="TrackCliffCurveStandardSingle6x6" type="MeshInstance3D" parent="."]
+mesh = ExtResource("137_oa3d2")
+
+[node name="TrackCliffCurveStripedDouble5x5" type="MeshInstance3D" parent="."]
+mesh = ExtResource("138_2p8vo")
+
+[node name="TrackCliffCurveStripedDouble6x6" type="MeshInstance3D" parent="."]
+mesh = ExtResource("139_8f5mt")
+
+[node name="TrackCliffCurveStripedSingle4x4" type="MeshInstance3D" parent="."]
+mesh = ExtResource("140_v7op8")
+
+[node name="TrackCliffCurveStripedSingle5x5" type="MeshInstance3D" parent="."]
+mesh = ExtResource("141_ssw3p")
+
+[node name="TrackCliffCurveStripedSingle6x6" type="MeshInstance3D" parent="."]
+mesh = ExtResource("142_04r5m")
+
+[node name="TrackCliffEdgeStandard1TallDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("143_kimuv")
+
+[node name="TrackCliffEdgeStandard1TallSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("144_p0qdn")
+
+[node name="TrackCliffEdgeStandard2TallDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("145_4yed6")
+
+[node name="TrackCliffEdgeStandard2TallSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("146_dkmx3")
+
+[node name="TrackCliffEdgeStandard3TallDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("147_fhowf")
+
+[node name="TrackCliffEdgeStandard3TallSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("148_uxcfa")
+
+[node name="TrackCliffEdgeStriped1TallDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("149_brkxc")
+
+[node name="TrackCliffEdgeStriped1TallSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("150_dmtlh")
+
+[node name="TrackCliffEdgeStriped2TallDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("151_1bxul")
+
+[node name="TrackCliffEdgeStriped2TallSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("152_8137r")
+
+[node name="TrackCliffEdgeStriped3TallDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("153_86acs")
+
+[node name="TrackCliffEdgeStriped3TallSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("154_tvdiq")
+
+[node name="TrackCliffInclineStandard1TallDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("155_sdb4u")
+
+[node name="TrackCliffInclineStandard1TallSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("156_jfpdj")
+
+[node name="TrackCliffInclineStandard2TallDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("157_v762j")
+
+[node name="TrackCliffInclineStandard2TallSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("158_xesy5")
+
+[node name="TrackCliffInclineStandard3TallDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("159_4v32w")
+
+[node name="TrackCliffInclineStandard3TallSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("160_qb2gw")
+
+[node name="TrackCliffInclineStriped1TallDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("161_f4ivx")
+
+[node name="TrackCliffInclineStriped1TallSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("162_bt6ph")
+
+[node name="TrackCliffInclineStriped2TallDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("163_xnu7b")
+
+[node name="TrackCliffInclineStriped2TallSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("164_a51sc")
+
+[node name="TrackCliffInclineStriped3TallDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("165_f201b")
+
+[node name="TrackCliffInclineStriped3TallSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("166_pd6lc")
+
+[node name="TrackStandardCurveDouble4x4" type="MeshInstance3D" parent="."]
+mesh = ExtResource("167_vo17w")
+
+[node name="TrackStandardCurveDouble5x5" type="MeshInstance3D" parent="."]
+mesh = ExtResource("168_qyky4")
+
+[node name="TrackStandardCurveSingle3x3" type="MeshInstance3D" parent="."]
+mesh = ExtResource("169_1a81i")
+
+[node name="TrackStandardCurveSingle4x4" type="MeshInstance3D" parent="."]
+mesh = ExtResource("170_kse81")
+
+[node name="TrackStandardCurveSingle5x5" type="MeshInstance3D" parent="."]
+mesh = ExtResource("171_mo052")
+
+[node name="TrackStandardCurveWidening3x4" type="MeshInstance3D" parent="."]
+mesh = ExtResource("172_bsfyn")
+
+[node name="TrackStandardCurveWidening4x5" type="MeshInstance3D" parent="."]
+mesh = ExtResource("173_4j5me")
+
+[node name="TrackStandardCurveWidening5x6" type="MeshInstance3D" parent="."]
+mesh = ExtResource("174_2jy04")
+
+[node name="TrackStandardEsseDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("175_mo81i")
+
+[node name="TrackStandardEsseSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("176_usr5h")
+
+[node name="TrackStandardFinishLineDoubleBlank" type="MeshInstance3D" parent="."]
+mesh = ExtResource("177_y4gvh")
+
+[node name="TrackStandardFinishLineDoubleCheckered" type="MeshInstance3D" parent="."]
+mesh = ExtResource("178_w7ctk")
+
+[node name="TrackStandardFinishLineSingleBlank" type="MeshInstance3D" parent="."]
+mesh = ExtResource("179_inkca")
+
+[node name="TrackStandardFinishLineSingleCheckered" type="MeshInstance3D" parent="."]
+mesh = ExtResource("180_4x7l1")
+
+[node name="TrackStandardInclineDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("181_r1s4r")
+
+[node name="TrackStandardInclineSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("182_g5lqn")
+
+[node name="TrackStandardStraightDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("183_ykvur")
+
+[node name="TrackStandardStraightSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("184_0iuqb")
+
+[node name="TrackStandardStraightWidening" type="MeshInstance3D" parent="."]
+mesh = ExtResource("185_bs44c")
+
+[node name="TrackStripedCurveDouble4x4" type="MeshInstance3D" parent="."]
+mesh = ExtResource("186_7v8mg")
+
+[node name="TrackStripedCurveDouble5x5" type="MeshInstance3D" parent="."]
+mesh = ExtResource("187_8ga2h")
+
+[node name="TrackStripedCurveSingle3x3" type="MeshInstance3D" parent="."]
+mesh = ExtResource("188_i04ep")
+
+[node name="TrackStripedCurveSingle4x4" type="MeshInstance3D" parent="."]
+mesh = ExtResource("189_5ohhf")
+
+[node name="TrackStripedCurveSingle5x5" type="MeshInstance3D" parent="."]
+mesh = ExtResource("190_j1nol")
+
+[node name="TrackStripedCurveWidening3x4" type="MeshInstance3D" parent="."]
+mesh = ExtResource("191_op8qb")
+
+[node name="TrackStripedCurveWidening4x5" type="MeshInstance3D" parent="."]
+mesh = ExtResource("192_gblut")
+
+[node name="TrackStripedCurveWidening5x6" type="MeshInstance3D" parent="."]
+mesh = ExtResource("193_6jd8l")
+
+[node name="TrackStripedEndStraightDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("194_xyy1x")
+
+[node name="TrackStripedEndStraightSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("195_ldert")
+
+[node name="TrackStripedEsseDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("196_5bfgd")
+
+[node name="TrackStripedEsseSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("197_0fwyj")
+
+[node name="TrackStripedFinishLineDoubleBlank" type="MeshInstance3D" parent="."]
+mesh = ExtResource("198_001q0")
+
+[node name="TrackStripedFinishLineDoubleCheckered" type="MeshInstance3D" parent="."]
+mesh = ExtResource("199_t8rdn")
+
+[node name="TrackStripedFinishLineSingleBlank" type="MeshInstance3D" parent="."]
+mesh = ExtResource("200_7vej7")
+
+[node name="TrackStripedFinishLineSingleCheckered" type="MeshInstance3D" parent="."]
+mesh = ExtResource("201_kdv28")
+
+[node name="TrackStripedInclineDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("202_3kha0")
+
+[node name="TrackStripedInclineSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("203_tthfb")
+
+[node name="TrackStripedStraightDouble" type="MeshInstance3D" parent="."]
+mesh = ExtResource("204_qtxxy")
+
+[node name="TrackStripedStraightSingle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("205_wb2pj")
+
+[node name="TrackStripedStraightWidening" type="MeshInstance3D" parent="."]
+mesh = ExtResource("206_3x6u1")
