@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bxwp6657g1uxr"]
+
+[resource]
+resource_name = "paintRed"
+albedo_color = Color(0.63181, 0.82, 0.1558, 1)
+metallic = 1.0

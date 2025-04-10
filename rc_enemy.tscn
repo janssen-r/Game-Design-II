@@ -1,11 +1,7 @@
-[gd_scene load_steps=14 format=4 uid="uid://btc1xqw5tjj4a"]
+[gd_scene load_steps=13 format=4 uid="uid://mg8rwx38e42"]
 
-[ext_resource type="Script" uid="uid://ddbtuwxfxrey6" path="res://rc_player.gd" id="1_nqw02"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ghvx"]
-resource_name = "paintRed"
-albedo_color = Color(1, 0.227451, 0.360134, 1)
-metallic = 1.0
+[ext_resource type="Script" uid="uid://b5qkmn2ai1aav" path="res://rc_enemy.gd" id="1_sh3ng"]
+[ext_resource type="Material" uid="uid://bxwp6657g1uxr" path="res://enemybodycolor.tres" id="2_bcqqb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3twq"]
 resource_name = "plastic"
@@ -73,7 +69,7 @@ _surfaces = [{
 "format": 34359742487,
 "index_count": 594,
 "index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgABgAIAAkABgAJAAoABgAKAAsABgALAAwABgAMAA0ABgANAA4ADwAGAA4ADgAQAA8AEQAPABAAEQAQABIAEQASABMAEQATABQAEQAUABUAFgARABUAFwAWABUAFwAVABgAFwAYABkAFwAZABoAFwAaABsAHAAXABsAHQAcABsAGwAeAB0AHwAcAB0AHQAgAB8AIQAiACMAJAAhACMAJQAkACMAIwAmACUAJwAoACkAKQAqACcAKwAsAC0ALQAuACsALwAwADEAMgAvADEAMwAvADIAMgAxADQANQAyADQANQA0ADYANQA2ADcANwA4ADUAOQA1ADgAOgA7ADwAPAA9ADoAPgA/AEAAQABBAD4AQgBDAEQARQBCAEQARQBGAEIARwBFAEQARABIAEcASQBHAEgASgBJAEgASgBIAEsASwBMAEoATQBOAE8ATwBQAE0AUQBSAFMAUwBUAFEAVQBWAFcAWABZAFUAWgBYAFUAWwBaAFUAVwBbAFUAXABbAFcAXQBcAFcAXgBdAFcAXgBXAF8AYABeAF8AYABfAGEAYgBgAGEAYwBiAGEAZABjAGEAYQBlAGQAZgBnAGgAaABpAGYAaQBqAGYAaQBrAGoAawBsAGoAbABtAGoAbgBvAHAAcABxAG4AcgBzAHQAdAB1AHIAdgB3AHgAeAB5AHYAegB7AHwAfAB9AHoAfgB/AIAAgACBAH4AggCDAIQAhACFAIIAhgCHAIgAiACJAIYAiQCKAIYAigCLAIYAjACNAI4AjACOAI8AjACPAJAAkQCMAJAAkACSAJEAkwCRAJIAkgCUAJMAkgCVAJQAlQCWAJQAlgCXAJQAmACZAJoAmgCbAJgAnACdAJ4AnACfAKAAnACgAKEAnAChAKIAnACjAJ8AnACeAKMAnACiAKQApQCjAJ4ApgCcAKQApwClAJ4ApACoAKYAqACpAKYAqgCnAJ4AqQCrAKYArACqAJ4ArQCsAJ4ArgCtAJ4ArwCuAJ4ArwCeALAAsQCvALAAsgCxALAAsACzALIAswC0ALIAswCmALQApgC1ALQApgC2ALUAtwC2AKYAuAC3AKYAuQC4AKYAqwC5AKYAugC7ALwAvAC9AL4AvAC/AL0AvAC+AMAAvADAALoAvADBAL8AwADCALoAwgDDALoAugDDAMQAwQDFAL8AxADGALoAxgDHALoAwQDIAMUAwQDJAMgAxwDKALoAygDLALoAywDMALoAzADNALoAwQDOAMkAzQDPALoAwQDQAM4AwQDRANAAzQDSAM8AwQDTANEAwQDPANMAwQDUAM8A1QDTAM8A0gDWAM8A1wDVAM8A1gDXAM8A2ADZANoA2gDbANgA3ADdAN4A3gDfANwA3wDgANwA3wDhAOAA4gDjAOQA5ADlAOIA5QDmAOIA5gDnAOIA6ADpAOoA6gDrAOgA6wDsAOgA6wDtAOwA7gDvAPAA8ADxAO4A8QDyAO4A8wD0APUA9QD2APMA9gD3APMA+AD5APoA+gD7APgA/AD9AP4A/gD/APwAAAEBAQIBAgEDAQABBAEFAQYBBgEHAQQB"),
-"material": SubResource("StandardMaterial3D_2ghvx"),
+"material": ExtResource("2_bcqqb"),
 "name": "paintRed",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -214,14 +210,9 @@ metadata/extras = {
 "targetNames": []
 }
 
-[sub_resource type="LabelSettings" id="LabelSettings_e5bjn"]
-font_size = 32
-outline_size = 5
-outline_color = Color(0, 0, 0, 1)
-
-[node name="rc_player" type="VehicleBody3D"]
+[node name="rc_enemy" type="VehicleBody3D"]
 gravity_scale = 1.5
-script = ExtResource("1_nqw02")
+script = ExtResource("1_sh3ng")
 
 [node name="body" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34997e-13, 0.1, 0)
@@ -235,10 +226,6 @@ shape = SubResource("ConvexPolygonShape3D_e5bjn")
 [node name="centerMass" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26, 0)
 top_level = true
-
-[node name="Camera3D" type="Camera3D" parent="centerMass"]
-transform = Transform3D(1, 0, 0, 0, 0.97237, 0.233445, 0, -0.233445, 0.97237, 0, 1.6, 4)
-current = true
 
 [node name="backLeft" type="VehicleWheel3D" parent="."]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.5, 0.3, 0.9)
@@ -278,12 +265,27 @@ transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 0.25, 
 mesh = SubResource("ArrayMesh_lobh4")
 skeleton = NodePath("")
 
-[node name="Label" type="Label" parent="."]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -45.0
-offset_right = 97.0
-grow_vertical = 0
-text = "0 mph"
-label_settings = SubResource("LabelSettings_e5bjn")
+[node name="rayForward" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+target_position = Vector3(0, -5, 0)
+debug_shape_thickness = 5
+
+[node name="rayForwardRight" type="RayCast3D" parent="."]
+transform = Transform3D(0.866025, -0.5, 2.18557e-08, 0, -4.37114e-08, -1, 0.5, 0.866025, -3.78552e-08, 0, 0, 0)
+target_position = Vector3(0, -5, 0)
+debug_shape_thickness = 5
+
+[node name="rayRight" type="RayCast3D" parent="."]
+transform = Transform3D(0.258819, -0.965926, 4.2222e-08, 0, -4.37114e-08, -1, 0.965926, 0.258819, -1.13133e-08, 0, 0, 0)
+target_position = Vector3(0, -5, 0)
+debug_shape_thickness = 5
+
+[node name="rayLeft" type="RayCast3D" parent="."]
+transform = Transform3D(0.258819, 0.965926, -4.2222e-08, 0, -4.37114e-08, -1, -0.965926, 0.258819, -1.13133e-08, 0, 0, 0)
+target_position = Vector3(0, -5, 0)
+debug_shape_thickness = 5
+
+[node name="rayForwardLeft" type="RayCast3D" parent="."]
+transform = Transform3D(0.866025, 0.5, -2.18557e-08, 0, -4.37114e-08, -1, -0.5, 0.866025, -3.78552e-08, 0, 0, 0)
+target_position = Vector3(0, -5, 0)
+debug_shape_thickness = 5

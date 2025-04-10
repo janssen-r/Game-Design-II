@@ -1,9 +1,11 @@
 extends VehicleBody3D
 
-const MAX_STEER = 0.4
-const MAX_RPM = 300
+const MAX_STEER = 0.3
+const MAX_RPM = 200
 const MAX_TORQUE = 200
 const HORSE_POWER = 100
+
+var cur_max_steer
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
@@ -15,7 +17,12 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()
 
-	steering = lerp(steering, Input.get_axis("ui_right", "ui_left") * MAX_STEER, delta * 5.0)
+	if Input.is_action_pressed("ui_accept"):
+		cur_max_steer = 1
+	else:
+		cur_max_steer = MAX_STEER
+
+	steering = lerp(steering, Input.get_axis("ui_right", "ui_left") * cur_max_steer, delta * 5.0)
 	var accel = Input.get_axis("ui_down", "ui_up") * HORSE_POWER
 	$backLeft.engine_force = calc_engine_force(accel, abs($backLeft.get_rpm()))
 	$backRight.engine_force = calc_engine_force(accel, abs($backLeft.get_rpm()))
@@ -27,4 +34,12 @@ func _physics_process(delta: float) -> void:
 	$centerMass.transform = $centerMass.transform.interpolate_with(transform, delta * 5.0)
 	
 	$centerMass/Camera3D.look_at(global_position.lerp(global_position + linear_velocity, delta * 5.0))
-	#TODO: check and right
+
+	check_and_right()
+
+func check_and_right():
+	if global_transform.basis.y.dot(Vector3.UP) < 0:
+		var cur_rotation = self.rotation_degrees
+		cur_rotation.x = 0 # reset pitch
+		cur_rotation.z = 0 # reset roll
+		self.rotation_degrees = cur_rotation
