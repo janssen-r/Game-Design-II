@@ -6,12 +6,13 @@ const MAX_TORQUE = 200
 const HORSE_POWER = 100
 
 var cur_max_steer
+var cur_max_rpm
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	
 func calc_engine_force(accel, rpm):
-	return accel * MAX_TORQUE * (1 - rpm / MAX_RPM)
+	return accel * MAX_TORQUE * (1 - rpm / cur_max_rpm)
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("reset"):
@@ -19,8 +20,12 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_pressed("ui_accept"):
 		cur_max_steer = 1
+		cur_max_rpm = 160
+	elif Input.is_action_pressed("Boost"):
+		cur_max_rpm = 500
 	else:
 		cur_max_steer = MAX_STEER
+		cur_max_rpm = MAX_RPM
 
 	steering = lerp(steering, Input.get_axis("ui_right", "ui_left") * cur_max_steer, delta * 5.0)
 	var accel = Input.get_axis("ui_down", "ui_up") * HORSE_POWER

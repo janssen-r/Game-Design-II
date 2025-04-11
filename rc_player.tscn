@@ -220,7 +220,7 @@ outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
 [node name="rc_player" type="VehicleBody3D"]
-gravity_scale = 1.5
+mass = 70.0
 script = ExtResource("1_nqw02")
 
 [node name="body" type="MeshInstance3D" parent="."]
