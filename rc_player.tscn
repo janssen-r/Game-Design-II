@@ -287,3 +287,23 @@ offset_right = 97.0
 grow_vertical = 0
 text = "0 mph"
 label_settings = SubResource("LabelSettings_e5bjn")
+
+[node name="boost" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -97.0
+offset_top = -45.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "100"
+label_settings = SubResource("LabelSettings_e5bjn")
+horizontal_alignment = 2
+
+[node name="boostDecay" type="Timer" parent="."]
+wait_time = 50.0
+autostart = true
+
+[connection signal="timeout" from="boostDecay" to="." method="_on_boost_decay_timeout"]
