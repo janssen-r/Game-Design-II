@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://qn0w1fjiyxv3"]
+
+[ext_resource type="MeshLibrary" uid="uid://dvyk1upf0jgf5" path="res://assets/meshes/rc_tiles_1.tres" id="1_irk2u"]
+[ext_resource type="PackedScene" uid="uid://btc1xqw5tjj4a" path="res://rc_player.tscn" id="2_yhui5"]
+[ext_resource type="PackedScene" uid="uid://mg8rwx38e42" path="res://rc_enemy.tscn" id="3_03nhd"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_irk2u"]
+
+[sub_resource type="Sky" id="Sky_yhui5"]
+sky_material = SubResource("ProceduralSkyMaterial_irk2u")
+
+[sub_resource type="Environment" id="Environment_w7q12"]
+sky = SubResource("Sky_yhui5")
+ambient_light_source = 2
+ambient_light_color = Color(0.347433, 0.703446, 0.781956, 1)
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_irk2u"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rjgen"]
+rough = true
+absorbent = true
+
+[node name="rc_world_1" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+light_color = Color(1, 1, 0.858824, 1)
+light_energy = 6.5
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_w7q12")
+camera_attributes = SubResource("CameraAttributesPractical_irk2u")
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh_library = ExtResource("1_irk2u")
+physics_material = SubResource("PhysicsMaterial_rjgen")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65523, 10, 96, 65502, 10, 96, 65501, 30, 96, 65526, 30, 96, 131063, 0, 655563, 131062, 0, 655563, 131061, 0, 655563, 131060, 0, 655563, 131059, 0, 655563, 131058, 0, 655563, 131057, 0, 655563, 131056, 0, 655563, 131053, 65535, 655555, 131052, 65534, 160, 131045, 65535, 655520, 131042, 1, 1441978, 131042, 2, 1441995, 131042, 3, 1441995, 131042, 4, 1441995, 131042, 5, 1441995, 131042, 6, 1441995, 131041, 7, 1048762, 131036, 12, 1441978, 131035, 13, 1048738, 262107, 19, 1048779, 262107, 20, 1048779, 262107, 21, 1048779, 262107, 22, 1048779, 262107, 23, 1048779, 262107, 24, 1048779, 262109, 26, 185, 262110, 27, 655545, 262111, 29, 1048761, 262108, 32, 1441977, 262109, 34, 185, 196578, 34, 160, 262110, 34, 203, 196579, 34, 203, 196580, 34, 203, 196581, 34, 203, 196582, 34, 203, 196583, 34, 203, 196585, 33, 1048761, 196585, 32, 1048779, 196585, 31, 1048779, 196585, 30, 1048779, 196585, 29, 1048779, 196584, 27, 655545, 196580, 26, 185, 196579, 20, 1441977, 196583, 26, 203, 196582, 26, 203, 196581, 26, 203, 196579, 24, 1441995, 196579, 23, 1441995, 196579, 22, 1441995, 196579, 21, 1441995, 196581, 19, 655563, 196582, 19, 655563, 196583, 19, 655563, 196584, 19, 655563, 196585, 19, 655563, 196586, 19, 655563, 196589, 16, 1048762, 196590, 15, 1441952, 196589, 8, 1048736, 196590, 7, 1441977, 196595, 6, 655545, 196594, 6, 655563, 196593, 6, 655563, 196592, 6, 655563, 196596, 8, 1048779, 196596, 9, 1048779, 196596, 10, 1048779, 196596, 11, 1048779, 196596, 12, 1048779, 196596, 13, 1048779, 196596, 14, 1048779, 196596, 15, 1048779, 196596, 16, 1048779, 196596, 17, 1048779, 196596, 18, 1048779, 196598, 20, 185, 196599, 21, 655563, 196600, 21, 655563, 196601, 21, 655563, 196603, 19, 1048761, 196604, 15, 1441977, 196604, 16, 1441995, 196604, 17, 1441995, 196604, 18, 1441995, 196606, 13, 203, 196607, 13, 203, 131072, 13, 203, 131073, 13, 203, 131074, 13, 203, 131076, 4, 1048779, 131076, 5, 1048779, 131076, 6, 1048779, 131076, 7, 1048779, 131076, 8, 1048779, 131076, 9, 1048779, 131076, 10, 1048779, 131076, 11, 1048779, 131076, 12, 1048761, 131075, 0, 655545, 131076, 3, 1048779, 131076, 2, 1048779, 131071, 0, 655520, 131070, 0, 655563, 131069, 0, 655563, 131068, 0, 655563, 131067, 0, 655563, 131066, 0, 655563, 131065, 0, 655563, 131064, 0, 655563)
+}
+metadata/_editor_floor_ = Vector3(0, 1, 0)
+
+[node name="rc_player" parent="." instance=ExtResource("2_yhui5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.88991, 2.22119, -0.0845221)
+
+[node name="rc_enemy" parent="." instance=ExtResource("3_03nhd")]
+transform = Transform3D(-0.00490441, 0, 0.999988, 0, 1, 0, -0.999988, 0, -0.00490441, -4.62172, 2.14388, 1.233)
+
+[node name="rc_enemy2" parent="." instance=ExtResource("3_03nhd")]
+transform = Transform3D(-0.00490441, 0, 0.999988, 0, 1, 0, -0.999988, 0, -0.00490441, -4.62172, 2.14388, -1.15174)
