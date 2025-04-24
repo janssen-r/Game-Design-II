@@ -9,6 +9,21 @@ const STUCK_TIME_THRESHOLD = 0.5
 
 var stuck_timer = 0.0
 var is_stuck = false
+var laps = 1
+var checkpoint = [false, false, false, false]
+
+func reset_checkpoints():
+	checkpoint = [false, false, false, false] #[true, true, true, true]
+	
+func do_lap():
+	laps += 1
+	reset_checkpoints()
+	if laps > 3:
+		await get_tree().create_timer (0.25).timeout
+		OS.alert("You win!") # replace with level change
+	else:
+		$Label2.text = "Lap %d/3" % laps
+	pass
 
 @onready var rayF = $rayForward
 @onready var rayFL = $rayForwardLeft

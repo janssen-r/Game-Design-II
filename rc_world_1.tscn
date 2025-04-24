@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ci3ulgnf6jhka"]
+[gd_scene load_steps=7 format=3 uid="uid://ci3ulgnf6jhka"]
 
 [ext_resource type="MeshLibrary" uid="uid://dvyk1upf0jgf5" path="res://assets/meshes/rc_tiles_1.tres" id="1_orelr"]
 [ext_resource type="PackedScene" uid="uid://btc1xqw5tjj4a" path="res://rc_player.tscn" id="2_w7q12"]
 [ext_resource type="PackedScene" uid="uid://mg8rwx38e42" path="res://rc_enemy.tscn" id="3_rjgen"]
+[ext_resource type="PackedScene" uid="uid://dno3iwa6um3jf" path="res://rc_checkpoint.tscn" id="4_hy7tj"]
 
 [sub_resource type="Environment" id="Environment_w7q12"]
 
@@ -40,3 +41,18 @@ transform = Transform3D(-0.00490441, 0, 0.999988, 0, 1, 0, -0.999988, 0, -0.0049
 
 [node name="rc_enemy2" parent="." instance=ExtResource("3_rjgen")]
 transform = Transform3D(-0.00490441, 0, 0.999988, 0, 1, 0, -0.999988, 0, -0.00490441, -4.62172, 2.14388, -1.15174)
+
+[node name="rc_checkpoint" parent="." instance=ExtResource("4_hy7tj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43313, 4.88734, 0)
+checkpoint_index = 3
+
+[node name="rc_checkpoint2" parent="." instance=ExtResource("4_hy7tj")]
+transform = Transform3D(0.0871558, 0, 0.996195, 0, 1, 0, -0.996195, 0, 0.0871558, -42.8109, 4.26858, 10.2097)
+
+[node name="rc_checkpoint3" parent="." instance=ExtResource("4_hy7tj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7231, 7.09984, 62.1153)
+checkpoint_index = 1
+
+[node name="rc_checkpoint4" parent="." instance=ExtResource("4_hy7tj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 13.1809, 8.74457, 28.79)
+checkpoint_index = 2
