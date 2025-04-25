@@ -59,6 +59,17 @@ func _physics_process(delta: float) -> void:
 	
 	$centerMass/Camera3D.look_at(global_position.lerp(global_position + linear_velocity, delta * 5.0))
 
+# TODO SOUND!!!
+	if accel > 0:
+		var max_dB = 110
+		var dB = clamp(max_dB * abs($backLeft.engine_force/MAX_RPM), -10, max_dB)
+		$AudioStreamPlayer3D.volume_db = dB
+	if not $AudioStreamPlayer3D.is_playing():
+		pass # change the stream to the vroom sound and play
+	else:
+		$AudioStreamPlayer3D.volume_db = 10  # default
+	# change the stream to the idle sound and play
+
 	check_and_right()
 
 func check_and_right():

@@ -316,4 +316,6 @@ grow_horizontal = 0
 text = "Lap 1/3"
 label_settings = SubResource("LabelSettings_e5bjn")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+
 [connection signal="timeout" from="boostDecay" to="." method="_on_boost_decay_timeout"]
